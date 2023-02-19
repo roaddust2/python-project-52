@@ -1,4 +1,4 @@
-PORT=8000
+PORT ?= 8000
 ENV=poetry run
 MANAGE=$(ENV) python3 manage.py
 
@@ -17,4 +17,4 @@ dev:
 prod:
 	make m_migrate
 	make migrate
-	$(ENV) gunicorn --bind 0.0.0.0:$(PORT) task_manager.wsgi
+	$(ENV) gunicorn -w 5 -b 0.0.0.0:$(PORT) task_manager.wsgi
