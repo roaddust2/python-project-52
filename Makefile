@@ -14,4 +14,6 @@ dev:
 	$(MANAGE) runserver
 
 prod:
+	make m_migrate
+	make migrate
 	$(ENV) gunicorn task_manager.wsgi
