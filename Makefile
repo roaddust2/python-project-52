@@ -16,4 +16,4 @@ dev:
 prod:
 	make m_migrate
 	make migrate
-	$(ENV) gunicorn task_manager.wsgi
+	$(ENV) gunicorn --bind 0.0.0.0:8000 task_manager.wsgi
