@@ -12,3 +12,6 @@ migrate:
 
 dev:
 	$(MANAGE) runserver
+
+prod:
+	$(ENV) gunicorn task_manager.wsgi
