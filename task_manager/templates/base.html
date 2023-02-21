@@ -1,12 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>task_manager - {% block title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% load i18n %}
+    {% load static %}
+    <link rel="icon"href="{% static 'favicon.ico' %}">
+    {% load bootstrap4 %}
+    <title>{% translate 'Title' %}</title>
 </head>
-<body>
-    {% block content %}{% endblock %}
+<body class="d-flex flex-column min-vh-100">
+    <header>
+        <div class="navbar navbar-expand-md navbar-dark bg-dark">
+            <a class="navbar-brand" href="/">{% translate 'BaseNavbarBrand' %}</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">{% translate 'BaseNavbarUsers' %}</a>
+                    </li>
+                </ul>
+                <a class="btn btn-secondary mr-2" href="/">{% translate 'BaseNavbarSignIn' %}</a>
+                <a class="btn btn-primary" href="/">{% translate 'BaseNavbarSignUp' %}</a>
+            </div>  
+        </div>
+    </header>
+    <main class="container mt-auto">
+        {% block content %}{% endblock %}
+    </main>
+    <footer class="mt-auto border-top">
+        <div class="text-center p-4">
+            <a class="text-reset fw-bold" target="_blank" href="https://ru.hexlet.io">Hexlet</a>
+        </div>
+    </footer>
+    {% bootstrap_css %}
+    {% bootstrap_javascript jquery='full' %}
 </body>
 </html>
