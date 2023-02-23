@@ -13,13 +13,14 @@ compilemessages:
 	$(ENV) django-admin compilemessages
 
 m_migrate:
-	$(ENV) $(MANAGE) makemigrations
+	$(MANAGE) makemigrations
 
 migrate:
-	$(ENV) $(MANAGE) migrate
+	$(MANAGE) migrate
 
 dev:
 	$(MANAGE) runserver
 
 prod:
+	$(MANAGE) migrate
 	$(ENV) gunicorn -b 0.0.0.0:$(PORT) task_manager.wsgi
