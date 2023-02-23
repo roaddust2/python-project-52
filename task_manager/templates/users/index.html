@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<h1 class="my-4">{% translate 'UsersIndexTitle' %}</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>{% translate 'UsersIndexTableUsername' %}</th>
+            <th>{% translate 'UsersIndexTableUsernameFull' %}</th>
+            <th>{% translate 'UsersIndexTableCreatedAt' %}</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {% if users %}
+        {% for user in users %}
+        <tr>
+            <td>{{user.id}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.first_name}} {{user.last_name}}</td>
+            <td>{{user.date_joined}}</td>
+            <td>
+                <a href="#">Изменить</a>
+                <br>
+                <a href="#">Удалить</a>
+            </td>
+        </tr>
+        {% endfor %}
+        {% endif %}
+    </tbody>
+</table>
+{% endblock %}
