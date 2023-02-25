@@ -1,6 +1,5 @@
-from task_manager.forms import CustomUserCreationForm
+from task_manager.users.forms import CustomUserCreationForm
 from django.contrib.auth.models import User
-
 from django.views.generic import (
     ListView,
     CreateView,
@@ -16,4 +15,4 @@ class UsersListView(ListView):
 class UsersSignUpView(CreateView):
     form_class = CustomUserCreationForm
     template_name = 'users/signup.html'
-    success_url = 'index'
+    success_url = 'login'
