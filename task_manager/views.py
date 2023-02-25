@@ -14,7 +14,7 @@ class MainPageView(TemplateView):
 
 
 class CustomLoginView(SuccessMessageMixin, LoginView):
-    template_name='login.html'
+    template_name = 'login.html'
     next_page = 'index'
     success_message = _('LoginAlertSuccess')
 

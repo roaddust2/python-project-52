@@ -3,6 +3,14 @@
 {% load bootstrap4 %}
 
 {% block content %}
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-{% if message.tags %}{{ message.tags }}{% else %}info{% endif %} alert-dismissible fade show">
+  <button class="close" type="button" data-dismiss="alert" aria-label="close">×</button>
+  {{ message }}
+</div>
+{% endfor %}
+{% endif %}
 <h1 class="my-4">{% translate 'LoginTitle' %}</h1>
 <form method="post">{% csrf_token %}
     {% bootstrap_form form %}
