@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-25 15:56+0400\n"
+"POT-Creation-Date: 2023-02-25 17:11+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -76,6 +76,18 @@ msgstr "Вход"
 msgid "LoginButton"
 msgstr "Войти"
 
+#: task_manager/templates/users/delete.html:6
+msgid "UsersDeleteTitle"
+msgstr "Удаление пользователя"
+
+#: task_manager/templates/users/delete.html:8
+msgid "UsersDeleteText"
+msgstr "Вы уверены, что хотите удалить"
+
+#: task_manager/templates/users/delete.html:11
+msgid "UsersDeleteButton"
+msgstr "Да, удалить"
+
 #: task_manager/templates/users/index.html:13
 msgid "UsersIndexTitle"
 msgstr "Пользователи"
@@ -116,7 +128,7 @@ msgstr "Имя"
 msgid "LoginLastName"
 msgstr "Фамилия"
 
-#: task_manager/users/views.py:41
+#: task_manager/users/views.py:42 task_manager/users/views.py:58
 msgid "UsersUpdateError"
 msgstr "У вас нет прав для изменения другого пользователя."
 

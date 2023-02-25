@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load bootstrap4 %}
+
+{% block content %}
+<h1 class="my-4">{% translate 'UsersDeleteTitle' %}</h1>
+<form method="post">{% csrf_token %}
+    <p>{% translate 'UsersDeleteText' %} {{ object.first_name }} {{ object.last_name }}?</p>
+    {% bootstrap_form form %}
+    {% buttons %}
+    <button class="btn btn-danger" type="submit">{% translate 'UsersDeleteButton' %}</button>
+    {% endbuttons %}
+</form>
+{% endblock %}
