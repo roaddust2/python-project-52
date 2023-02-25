@@ -100,6 +100,12 @@ DATABASES = {
 }
 
 
+# Autentification
+# https://docs.djangoproject.com/en/4.1/ref/settings/#auth
+
+LOGIN_URL = '/login/'
+
+
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 

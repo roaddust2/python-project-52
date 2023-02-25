@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-25 14:01+0400\n"
+"POT-Creation-Date: 2023-02-25 15:56+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -68,27 +68,27 @@ msgstr "Практические курсы по программировани�
 msgid "IndexCardButton"
 msgstr "Узнать больше"
 
-#: task_manager/templates/login.html:6
+#: task_manager/templates/login.html:14
 msgid "LoginTitle"
 msgstr "Вход"
 
-#: task_manager/templates/login.html:10
+#: task_manager/templates/login.html:18
 msgid "LoginButton"
 msgstr "Войти"
 
-#: task_manager/templates/users/index.html:5
+#: task_manager/templates/users/index.html:13
 msgid "UsersIndexTitle"
 msgstr "Пользователи"
 
-#: task_manager/templates/users/index.html:10
+#: task_manager/templates/users/index.html:18
 msgid "UsersIndexTableUsername"
 msgstr "Имя пользователя"
 
-#: task_manager/templates/users/index.html:11
+#: task_manager/templates/users/index.html:19
 msgid "UsersIndexTableUsernameFull"
 msgstr "Полное имя"
 
-#: task_manager/templates/users/index.html:12
+#: task_manager/templates/users/index.html:20
 msgid "UsersIndexTableCreatedAt"
 msgstr "Дата создания"
 
@@ -100,13 +100,25 @@ msgstr "Регистрация"
 msgid "UsersSignUpButton"
 msgstr "Зарегистрировать"
 
-#: task_manager/users/forms.py:8
+#: task_manager/templates/users/update.html:6
+msgid "UsersUpdateTitle"
+msgstr "Изменение пользователя"
+
+#: task_manager/templates/users/update.html:10
+msgid "UsersUpdateButton"
+msgstr "Изменить"
+
+#: task_manager/users/forms.py:9
 msgid "LoginFirstName"
 msgstr "Имя"
 
-#: task_manager/users/forms.py:9
+#: task_manager/users/forms.py:10
 msgid "LoginLastName"
 msgstr "Фамилия"
+
+#: task_manager/users/views.py:41
+msgid "UsersUpdateError"
+msgstr "У вас нет прав для изменения другого пользователя."
 
 #: task_manager/views.py:19
 msgid "LoginAlertSuccess"

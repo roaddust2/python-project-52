@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-25 14:01+0400\n"
+"POT-Creation-Date: 2023-02-25 15:56+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -66,27 +66,27 @@ msgstr "Practical programming courses"
 msgid "IndexCardButton"
 msgstr "Learn more"
 
-#: task_manager/templates/login.html:6
+#: task_manager/templates/login.html:14
 msgid "LoginTitle"
 msgstr "Login"
 
-#: task_manager/templates/login.html:10
+#: task_manager/templates/login.html:18
 msgid "LoginButton"
 msgstr "Sign in"
 
-#: task_manager/templates/users/index.html:5
+#: task_manager/templates/users/index.html:13
 msgid "UsersIndexTitle"
 msgstr "Users"
 
-#: task_manager/templates/users/index.html:10
+#: task_manager/templates/users/index.html:18
 msgid "UsersIndexTableUsername"
 msgstr "Username"
 
-#: task_manager/templates/users/index.html:11
+#: task_manager/templates/users/index.html:19
 msgid "UsersIndexTableUsernameFull"
 msgstr "Full name"
 
-#: task_manager/templates/users/index.html:12
+#: task_manager/templates/users/index.html:20
 msgid "UsersIndexTableCreatedAt"
 msgstr "Creation date"
 
@@ -98,13 +98,25 @@ msgstr "Registration"
 msgid "UsersSignUpButton"
 msgstr "Sign up"
 
-#: task_manager/users/forms.py:8
+#: task_manager/templates/users/update.html:6
+msgid "UsersUpdateTitle"
+msgstr "Update user"
+
+#: task_manager/templates/users/update.html:10
+msgid "UsersUpdateButton"
+msgstr "Update"
+
+#: task_manager/users/forms.py:9
 msgid "LoginFirstName"
 msgstr "First name"
 
-#: task_manager/users/forms.py:9
+#: task_manager/users/forms.py:10
 msgid "LoginLastName"
 msgstr "Last name"
+
+#: task_manager/users/views.py:41
+msgid "UsersUpdateError"
+msgstr "You do not have permission to change another user."
 
 #: task_manager/views.py:19
 msgid "LoginAlertSuccess"

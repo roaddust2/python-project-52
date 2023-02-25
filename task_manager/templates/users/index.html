@@ -2,6 +2,14 @@
 {% load i18n %}
 
 {% block content %}
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-{% if message.tags %}{{ message.tags }}{% else %}info{% endif %} alert-dismissible fade show">
+  <button class="close" type="button" data-dismiss="alert" aria-label="close">×</button>
+  {{ message }}
+</div>
+{% endfor %}
+{% endif %}
 <h1 class="my-4">{% translate 'UsersIndexTitle' %}</h1>
 <table class="table table-striped">
     <thead>
@@ -20,9 +28,9 @@
             <td>{{user.id}}</td>
             <td>{{user.username}}</td>
             <td>{{user.first_name}} {{user.last_name}}</td>
-            <td>{{user.date_joined}}</td>
+            <td>{{user.date_joined|date:"d.m.Y H:i" }}</td>
             <td>
-                <a href="#">Изменить</a>
+                <a href="{% url 'users_update' pk=user.id %}">Изменить</a>
                 <br>
                 <a href="#">Удалить</a>
             </td>
