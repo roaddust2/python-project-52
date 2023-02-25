@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-24 17:42+0400\n"
+"POT-Creation-Date: 2023-02-25 13:34+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,11 +38,27 @@ msgstr "Task manager"
 msgid "BaseNavbarUsers"
 msgstr "Users"
 
-#: task_manager/templates/base.html:24
+#: task_manager/templates/base.html:23
+msgid "BaseNavbarStatuses"
+msgstr "Statuses"
+
+#: task_manager/templates/base.html:26
+msgid "BaseNavbarTags"
+msgstr "Tags"
+
+#: task_manager/templates/base.html:29
+msgid "BaseNavbarTasks"
+msgstr "Tasks"
+
+#: task_manager/templates/base.html:36
+msgid "BaseNavbarSignOut"
+msgstr "Logout"
+
+#: task_manager/templates/base.html:42
 msgid "BaseNavbarSignIn"
 msgstr "Sign in"
 
-#: task_manager/templates/base.html:27
+#: task_manager/templates/base.html:45
 msgid "BaseNavbarSignUp"
 msgstr "Sign up"
 
@@ -57,6 +73,14 @@ msgstr "Practical programming courses"
 #: task_manager/templates/index.html:11
 msgid "IndexCardButton"
 msgstr "Learn more"
+
+#: task_manager/templates/login.html:6
+msgid "LoginTitle"
+msgstr "Login"
+
+#: task_manager/templates/login.html:10
+msgid "LoginButton"
+msgstr "Sign in"
 
 #: task_manager/templates/users/index.html:5
 msgid "UsersIndexTitle"
