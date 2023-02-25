@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-24 17:42+0400\n"
+"POT-Creation-Date: 2023-02-25 13:34+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -40,11 +40,27 @@ msgstr "Менеджер задач"
 msgid "BaseNavbarUsers"
 msgstr "Пользователи"
 
-#: task_manager/templates/base.html:24
+#: task_manager/templates/base.html:23
+msgid "BaseNavbarStatuses"
+msgstr "Статусы"
+
+#: task_manager/templates/base.html:26
+msgid "BaseNavbarTags"
+msgstr "Метки"
+
+#: task_manager/templates/base.html:29
+msgid "BaseNavbarTasks"
+msgstr "Задачи"
+
+#: task_manager/templates/base.html:36
+msgid "BaseNavbarSignOut"
+msgstr "Выход"
+
+#: task_manager/templates/base.html:42
 msgid "BaseNavbarSignIn"
 msgstr "Войти"
 
-#: task_manager/templates/base.html:27
+#: task_manager/templates/base.html:45
 msgid "BaseNavbarSignUp"
 msgstr "Регистрация"
 
@@ -59,6 +75,14 @@ msgstr "Практические курсы по программировани�
 #: task_manager/templates/index.html:11
 msgid "IndexCardButton"
 msgstr "Узнать больше"
+
+#: task_manager/templates/login.html:6
+msgid "LoginTitle"
+msgstr "Вход"
+
+#: task_manager/templates/login.html:10
+msgid "LoginButton"
+msgstr "Войти"
 
 #: task_manager/templates/users/index.html:5
 msgid "UsersIndexTitle"

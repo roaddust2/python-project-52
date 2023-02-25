@@ -18,15 +18,34 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'users_index' %}">{% translate 'BaseNavbarUsers' %}</a>
                 </li>
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link" href="#">{% translate 'BaseNavbarStatuses' %}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">{% translate 'BaseNavbarTags' %}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">{% translate 'BaseNavbarTasks' %}</a>
+                </li>
+                {% endif %}
             </ul>
+            {% if user.is_authenticated %}
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="btn btn-secondary mr-2" href="#">{% translate 'BaseNavbarSignIn' %}</a>
+                    <a class="btn btn-secondary mr-2" href="{% url 'logout' %}">{% translate 'BaseNavbarSignOut' %}</a>
+                </li>
+            </ul>
+            {% else %}
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="btn btn-secondary mr-2" href="{% url 'login' %}">{% translate 'BaseNavbarSignIn' %}</a>
                 </li>
                 <li class="nav-item">
                     <a class="btn btn-primary" href="{% url 'users_signup' %}">{% translate 'BaseNavbarSignUp' %}</a>
                 </li>
             </ul>
+            {% endif %}
         </div>
     </nav>
     <div class="container wrapper flex-grow-1">
