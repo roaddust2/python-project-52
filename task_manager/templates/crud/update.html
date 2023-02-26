@@ -1,13 +1,12 @@
 {% extends 'base.html' %}
-{% load i18n %}
 {% load bootstrap4 %}
 
 {% block content %}
-<h1 class="my-4">{% translate 'UsersUpdateTitle' %}</h1>
+<h1 class="my-4">Update</h1>
 <form method="post">{% csrf_token %}
 {% bootstrap_form form %}
     {% buttons %}
-    <button class="btn btn-primary" type="submit">{% translate 'UsersUpdateButton' %}</button>
+    <button class="btn btn-primary" type="submit">Update</button>
     {% endbuttons %}
 </form>
 {% endblock %}

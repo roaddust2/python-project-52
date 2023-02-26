@@ -20,7 +20,7 @@
                 </li>
                 {% if user.is_authenticated %}
                 <li class="nav-item">
-                    <a class="nav-link" href="#">{% translate 'BaseNavbarStatuses' %}</a>
+                    <a class="nav-link" href="{% url 'statuses_index' %}">{% translate 'BaseNavbarStatuses' %}</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">{% translate 'BaseNavbarTags' %}</a>
@@ -42,7 +42,7 @@
                     <a class="btn btn-secondary mr-2" href="{% url 'login' %}">{% translate 'BaseNavbarSignIn' %}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="btn btn-primary" href="{% url 'users_signup' %}">{% translate 'BaseNavbarSignUp' %}</a>
+                    <a class="btn btn-primary" href="{% url 'users_create' %}">{% translate 'BaseNavbarSignUp' %}</a>
                 </li>
             </ul>
             {% endif %}
