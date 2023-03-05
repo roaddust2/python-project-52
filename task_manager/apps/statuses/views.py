@@ -29,7 +29,7 @@ class StatusCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     form_class = StatusForm
     template_name = 'crud/create.html'
     success_message = _('StatusCreateAlertSuccess')
-    
+
     def get_success_url(self):
         return reverse('statuses_index')
 
@@ -39,7 +39,7 @@ class StatusUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     form_class = StatusForm
     template_name = 'crud/update.html'
     success_message = _('StatusUpdateAlertSuccess')
-    
+
     def get_success_url(self):
         return reverse('statuses_index')
 

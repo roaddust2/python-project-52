@@ -17,8 +17,6 @@
 <a class="btn btn-primary mb-4" href="{% url create_button.url %}">{{ create_button.name }}</a>
 {% endif %}
 
-{{ task }}
-
 {% if users_list %}
 <table class="table table-striped">
     <thead>
@@ -26,7 +24,7 @@
             <th>ID</th>
             <th>{% translate 'UsersIndexTableUsername' %}</th>
             <th>{% translate 'UsersIndexTableUsernameFull' %}</th>
-            <th>{% translate 'UsersIndexTableCreatedAt' %}</th>
+            <th>{% translate 'Creation date' %}</th>
             <th></th>
         </tr>
     </thead>
@@ -55,8 +53,8 @@
     <thead>
         <tr>
             <th>ID</th>
-            <th>{% translate 'StatusesIndexTableName' %}</th>
-            <th>{% translate 'StatusesIndexTableCreatedAt' %}</th>
+            <th>{% translate 'Name' %}</th>
+            <th>{% translate 'Creation date' %}</th>
             <th></th>
         </tr>
     </thead>
@@ -79,16 +77,45 @@
 </table>
 {% endif %}
 
+{% if tags_list %}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>{% translate 'Name' %}</th>
+            <th>{% translate 'Creation date' %}</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {% if tags %}
+        {% for tag in tags %}
+        <tr>
+            <td>{{tag.id}}</td>
+            <td>{{tag.name}}</td>
+            <td>{{tag.created_at|date:"d.m.Y H:i" }}</td>
+            <td>
+                <a href="{% url 'tags_update' pk=tag.id %}">{% translate 'Change' %}</a>
+                <br>
+                <a href="{% url 'tags_delete' pk=tag.id %}">{% translate 'Delete' %}</a>
+            </td>
+        </tr>
+        {% endfor %}
+        {% endif %}
+    </tbody>
+</table>
+{% endif %}
+
 {% if tasks_list %}
 <table class="table table-striped">
     <thead>
         <tr>
             <th>ID</th>
-            <th>{% translate 'TasksIndexTableName' %}</th>
+            <th>{% translate 'Name' %}</th>
             <th>{% translate 'TasksIndexTableStatus' %}</th>
             <th>{% translate 'TasksIndexTableAuthor' %}</th>
             <th>{% translate 'TasksIndexTablePerformer' %}</th>
-            <th>{% translate 'TasksIndexTableCreatedAt' %}</th>
+            <th>{% translate 'Creation date' %}</th>
             <th></th>
         </tr>
     </thead>

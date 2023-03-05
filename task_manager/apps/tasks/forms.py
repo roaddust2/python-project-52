@@ -10,4 +10,4 @@ class CustomTaskCreationForm(forms.ModelForm):
 
     class Meta:
         model = Task
-        fields = ['name', 'description', 'status', 'performer']
+        fields = ['name', 'description', 'status', 'performer', 'tags']
