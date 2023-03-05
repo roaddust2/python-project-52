@@ -5,6 +5,7 @@ from django.views.generic import (
     CreateView,
     UpdateView,
     DeleteView,
+    DetailView,
 )
 from task_manager.apps.tasks.models import Task
 from task_manager.apps.tasks.forms import CustomTaskCreationForm
@@ -23,6 +24,11 @@ class TasksListView(LoginRequiredMixin, ListView):
         context['create_button'] = {"url": 'tasks_create', "name": _('TasksListButtonName')}
         context['tasks_list'] = True
         return context
+
+
+class TaskDetaileView(LoginRequiredMixin, DetailView):
+    model = Task
+    template_name = 'task.html'
 
 
 class TaskCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
