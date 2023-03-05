@@ -14,8 +14,15 @@ from task_manager.apps.statuses.forms import StatusForm
 
 class StatusesListView(LoginRequiredMixin, ListView):
     model = Status
-    template_name = 'statuses/index.html'
+    template_name = 'crud/list.html'
     context_object_name = 'statuses'
+
+    def get_context_data(self, **kwargs):
+        context = super(StatusesListView, self).get_context_data(**kwargs)
+        context['list_title'] = _('StatusesListTitle')
+        context['create_button'] = {"url": 'statuses_create', "name": _('StatusesListButtonName')}
+        context['statuses_list'] = True
+        return context
 
 
 class StatusCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):

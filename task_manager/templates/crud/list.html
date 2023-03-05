@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-{% if message.tags %}{{ message.tags }}{% else %}info{% endif %} alert-dismissible fade show">
+  <button class="close" type="button" data-dismiss="alert" aria-label="close">×</button>
+  {{ message }}
+</div>
+{% endfor %}
+{% endif %}
+
+<h1 class="my-4">{{ list_title }}</h1>
+
+{% if create_button %}
+<a class="btn btn-primary mb-4" href="{% url create_button.url %}">{{ create_button.name }}</a>
+{% endif %}
+
+{{ task }}
+
+{% if users_list == True %}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>{% translate 'UsersIndexTableUsername' %}</th>
+            <th>{% translate 'UsersIndexTableUsernameFull' %}</th>
+            <th>{% translate 'UsersIndexTableCreatedAt' %}</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {% if users %}
+        {% for user in users %}
+        <tr>
+            <td>{{user.id}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user}}</td>
+            <td>{{user.date_joined|date:"d.m.Y H:i" }}</td>
+            <td>
+                <a href="{% url 'users_update' pk=user.id %}">Изменить</a>
+                <br>
+                <a href="{% url 'users_delete' pk=user.id %}">Удалить</a>
+            </td>
+        </tr>
+        {% endfor %}
+        {% endif %}
+    </tbody>
+</table>
+{% endif %}
+
+{% if statuses_list %}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>{% translate 'StatusesIndexTableName' %}</th>
+            <th>{% translate 'StatusesIndexTableCreatedAt' %}</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {% if statuses %}
+        {% for status in statuses %}
+        <tr>
+            <td>{{status.id}}</td>
+            <td>{{status.name}}</td>
+            <td>{{status.created_at|date:"d.m.Y H:i" }}</td>
+            <td>
+                <a href="{% url 'statuses_update' pk=status.id %}">{% translate 'StatusesIndexTableChange' %}</a>
+                <br>
+                <a href="{% url 'statuses_delete' pk=status.id %}">{% translate 'StatusesIndexTableDelete' %}</a>
+            </td>
+        </tr>
+        {% endfor %}
+        {% endif %}
+    </tbody>
+</table>
+{% endif %}
+
+{% if tasks_list %}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>{% translate 'TasksIndexTableName' %}</th>
+            <th>{% translate 'TasksIndexTableStatus' %}</th>
+            <th>{% translate 'TasksIndexTableAuthor' %}</th>
+            <th>{% translate 'TasksIndexTablePerformer' %}</th>
+            <th>{% translate 'TasksIndexTableCreatedAt' %}</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {% if tasks %}
+        {% for task in tasks %}
+        <tr>
+            <td>{{task.id}}</td>
+            <td>{{task.name}}</td>
+            <td>{{task.status}}</td>
+            <td>{{task.author}}</td>
+            <td>{{task.performer}}</td>
+            <td>{{task.created_at|date:"d.m.Y H:i" }}</td>
+            <td>
+                <a href="{% url 'tasks_update' pk=task.id %}">{% translate 'TasksIndexTableChange' %}</a>
+                <br>
+                <a href="{% url 'tasks_delete' pk=task.id %}">{% translate 'TasksIndexTableDelete' %}</a>
+            </td>
+        </tr>
+        {% endfor %}
+        {% endif %}
+    </tbody>
+</table>
+{% endif %}
+{% endblock %}

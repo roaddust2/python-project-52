@@ -26,7 +26,7 @@
                     <a class="nav-link" href="#">{% translate 'BaseNavbarTags' %}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">{% translate 'BaseNavbarTasks' %}</a>
+                    <a class="nav-link" href="{% url 'tasks_index' %}">{% translate 'BaseNavbarTasks' %}</a>
                 </li>
                 {% endif %}
             </ul>

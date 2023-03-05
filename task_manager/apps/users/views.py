@@ -18,8 +18,14 @@ from django.contrib.auth.models import User
 
 class UsersListView(ListView):
     model = User
-    template_name = 'users/index.html'
+    template_name = 'crud/list.html'
     context_object_name = 'users'
+
+    def get_context_data(self, **kwargs):
+        context = super(UsersListView, self).get_context_data(**kwargs)
+        context['list_title'] = _('UsersListTitle')
+        context['users_list'] = True
+        return context
 
 
 class UserCreateView(CreateView):
