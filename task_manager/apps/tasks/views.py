@@ -1,5 +1,6 @@
 from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
+from django_filters.views import FilterView
 from django.views.generic import (
     ListView,
     CreateView,
@@ -8,15 +9,17 @@ from django.views.generic import (
     DetailView,
 )
 from task_manager.apps.tasks.models import Task
+from task_manager.apps.tasks.filters import TasksFilterSet
 from task_manager.apps.tasks.forms import CustomTaskCreationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
 
 
-class TasksListView(LoginRequiredMixin, ListView):
+class TasksListView(LoginRequiredMixin, FilterView):
     model = Task
     template_name = 'crud/list.html'
     context_object_name = 'tasks'
+    filterset_class = TasksFilterSet
 
     def get_context_data(self, **kwargs):
         context = super(TasksListView, self).get_context_data(**kwargs)

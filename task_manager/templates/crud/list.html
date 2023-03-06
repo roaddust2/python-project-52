@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% load bootstrap4 %}
 
 {% block content %}
 {% if messages %}
@@ -107,6 +108,15 @@
 {% endif %}
 
 {% if tasks_list %}
+<div class="card-body bg-light">
+    <form method="get">
+        {% bootstrap_form filter.form %}
+        <div class="form-group">
+            <input class="btn btn-primary" type="submit" value="{% translate 'Display' %}">
+            <a class="btn btn-secondary" href="{% url 'tasks_index' %}">{% translate 'Clear' %}</a>
+        </div>
+    </form>
+</div>
 <table class="table table-striped">
     <thead>
         <tr>
