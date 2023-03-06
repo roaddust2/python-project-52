@@ -32,6 +32,11 @@ class UserCreateView(CreateView):
     form_class = CustomUserCreationForm
     template_name = 'crud/create.html'
 
+    def get_context_data(self, **kwargs):
+        context = super(UserCreateView, self).get_context_data(**kwargs)
+        context['create_title'] = _('UserCreateTitle')
+        return context
+
     def get_success_url(self):
         return reverse('login')
 
@@ -48,6 +53,11 @@ class UserUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     def handle_no_permission(self):
         messages.add_message(self.request, messages.ERROR, _('UsersUpdateError'), extra_tags='danger')
         return redirect('users_index')
+
+    def get_context_data(self, **kwargs):
+        context = super(UserUpdateView, self).get_context_data(**kwargs)
+        context['update_title'] = _('UserUpdateTitle')
+        return context
 
     def get_success_url(self):
         return reverse('users_index')

@@ -30,6 +30,11 @@ class TagsCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     template_name = 'crud/create.html'
     success_message = _('TagCreateAlertSuccess')
 
+    def get_context_data(self, **kwargs):
+        context = super(TagsCreateView, self).get_context_data(**kwargs)
+        context['create_title'] = _('TagsCreateTitle')
+        return context
+
     def get_success_url(self):
         return reverse('tags_index')
 
@@ -39,6 +44,11 @@ class TagsUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     form_class = TagForm
     template_name = 'crud/update.html'
     success_message = _('TagUpdateAlertSuccess')
+
+    def get_context_data(self, **kwargs):
+        context = super(TagsUpdateView, self).get_context_data(**kwargs)
+        context['update_title'] = _('TagsUpdateTitle')
+        return context
 
     def get_success_url(self):
         return reverse('tags_index')

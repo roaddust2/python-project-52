@@ -30,6 +30,11 @@ class StatusCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     template_name = 'crud/create.html'
     success_message = _('StatusCreateAlertSuccess')
 
+    def get_context_data(self, **kwargs):
+        context = super(StatusCreateView, self).get_context_data(**kwargs)
+        context['create_title'] = _('StatusCreateTitle')
+        return context
+
     def get_success_url(self):
         return reverse('statuses_index')
 
@@ -39,6 +44,11 @@ class StatusUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     form_class = StatusForm
     template_name = 'crud/update.html'
     success_message = _('StatusUpdateAlertSuccess')
+
+    def get_context_data(self, **kwargs):
+        context = super(StatusUpdateView, self).get_context_data(**kwargs)
+        context['update_title'] = _('StatusUpdateTitle')
+        return context
 
     def get_success_url(self):
         return reverse('statuses_index')

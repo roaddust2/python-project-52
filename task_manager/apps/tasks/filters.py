@@ -1,4 +1,4 @@
-from django_filters import FilterSet, ModelChoiceFilter
+from django_filters import FilterSet, ModelChoiceFilter, BooleanFilter
 from django.contrib.auth.models import User
 from task_manager.apps.tags.models import Tag
 from task_manager.apps.tasks.models import Task
@@ -8,6 +8,13 @@ from django import forms
 
 
 class TasksFilterSet(FilterSet):
+
+    def self_tasks_filter(self, queryset, name, value):
+        if value:
+            author = getattr(self.request, 'user')
+            queryset = queryset.filter(author=author)
+        return queryset
+
     status = ModelChoiceFilter(
         queryset=Status.objects.all(),
         label=_('TasksFilterStatusLabel'),
@@ -42,6 +49,17 @@ class TasksFilterSet(FilterSet):
                 'title_id': 'id_tags'
             }
         )
+    )
+
+    self_tasks = BooleanFilter(
+        label=_('TasksFilterSelfTaskLabel'),
+        widget=forms.widgets.CheckboxInput(
+            attrs={
+                'name': 'self_task',
+                'title_id': 'id_self_task'
+            }
+        ),
+        method='self_tasks_filter',
     )
     
     class Meta:

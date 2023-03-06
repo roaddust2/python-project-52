@@ -39,6 +39,11 @@ class TaskCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     template_name = 'crud/create.html'
     success_message = _('TaskCreateAlertSuccess')
 
+    def get_context_data(self, **kwargs):
+        context = super(TaskCreateView, self).get_context_data(**kwargs)
+        context['create_title'] = _('TaskCreateTitle')
+        return context
+
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
@@ -52,6 +57,11 @@ class TaskUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     form_class = CustomTaskCreationForm
     template_name = 'crud/update.html'
     success_message = _('TaskUpdateAlertSuccess')
+
+    def get_context_data(self, **kwargs):
+        context = super(TaskUpdateView, self).get_context_data(**kwargs)
+        context['update_title'] = _('TaskUpdateTitle')
+        return context
 
     def get_success_url(self):
         return reverse('tasks_index')
