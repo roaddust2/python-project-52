@@ -3,8 +3,11 @@ from django.contrib.auth.models import User
 from task_manager.apps.tags.models import Tag
 from task_manager.apps.tasks.models import Task
 from task_manager.apps.statuses.models import Status
-from django.utils.translation import gettext_lazy as _
 from django import forms
+from task_manager.utils.text import FormFields
+
+
+field= FormFields()
 
 
 class TasksFilterSet(FilterSet):
@@ -17,7 +20,7 @@ class TasksFilterSet(FilterSet):
 
     status = ModelChoiceFilter(
         queryset=Status.objects.all(),
-        label=_('TasksFilterStatusLabel'),
+        label=field.tasks_filter_status,
         widget=forms.Select(
             attrs={
                 'name': 'status',
@@ -29,7 +32,7 @@ class TasksFilterSet(FilterSet):
 
     performer = ModelChoiceFilter(
         queryset=User.objects.all(),
-        label=_('TasksFilterPerformerLabel'),
+        label=field.tasks_filter_performer,
         widget=forms.Select(
             attrs={
                 'name': 'performer',
@@ -41,7 +44,7 @@ class TasksFilterSet(FilterSet):
 
     tags = ModelChoiceFilter(
         queryset=Tag.objects.all(),
-        label=_('TasksFilterTagsLabel'),
+        label=field.tasks_filter_tags,
         widget=forms.Select(
             attrs={
                 'name': 'tags',
@@ -52,7 +55,7 @@ class TasksFilterSet(FilterSet):
     )
 
     self_tasks = BooleanFilter(
-        label=_('TasksFilterSelfTaskLabel'),
+        label=field.tasks_filter_self_tasks,
         widget=forms.widgets.CheckboxInput(
             attrs={
                 'name': 'self_task',
