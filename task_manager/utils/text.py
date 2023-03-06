@@ -38,10 +38,12 @@ class Messages:
         self.status_create_succ = _('StatusCreateMessageSucc')
         self.status_update_succ = _('StatusUpdateMessageSucc')
         self.status_delete_succ = _('StatusDeleteMessageSucc')
+        self.status_delete_err = _('StatusDeleteMessageErr')
 
         self.tag_create_succ = _('TagCreateMessageSucc')
         self.tag_update_succ = _('TagUpdateMessageSucc')
         self.tag_delete_succ = _('TagDeleteMessageSucc')
+        self.tag_delete_err = _('TagDeleteMessageErr')
 
         self.task_create_succ = _('TaskCreateMessageSucc')
         self.task_update_succ = _('TaskUpdateMessageSucc')

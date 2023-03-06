@@ -1,0 +1,352 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-06 19:20+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: task_manager/templates/base.html:11
+msgid "Title"
+msgstr ""
+
+#: task_manager/templates/base.html:15
+msgid "BaseNavbarBrand"
+msgstr "Менеджер задач"
+
+#: task_manager/templates/base.html:19
+msgid "BaseNavbarUsers"
+msgstr "Пользователи"
+
+#: task_manager/templates/base.html:23
+msgid "BaseNavbarStatuses"
+msgstr "Статусы"
+
+#: task_manager/templates/base.html:26
+msgid "BaseNavbarTags"
+msgstr "Метки"
+
+#: task_manager/templates/base.html:29
+msgid "BaseNavbarTasks"
+msgstr "Задачи"
+
+#: task_manager/templates/base.html:36
+msgid "BaseNavbarSignOut"
+msgstr "Выход"
+
+#: task_manager/templates/base.html:42
+msgid "BaseNavbarSignIn"
+msgstr "Вход"
+
+#: task_manager/templates/base.html:45
+msgid "BaseNavbarSignUp"
+msgstr "Регистрация"
+
+#: task_manager/templates/crud/create.html:10
+msgid "Create"
+msgstr "Создать"
+
+#: task_manager/templates/crud/delete.html:11
+#: task_manager/templates/crud/list.html:43
+#: task_manager/templates/crud/list.html:72
+#: task_manager/templates/crud/list.html:101
+#: task_manager/templates/crud/list.html:145
+#: task_manager/templates/tasks/task.html:47
+msgid "Delete"
+msgstr "Удалить"
+
+#: task_manager/templates/crud/list.html:26
+msgid "UsersIndexTableUsername"
+msgstr "Имя пользователя"
+
+#: task_manager/templates/crud/list.html:27
+msgid "UsersIndexTableUsernameFull"
+msgstr "Полное имя"
+
+#: task_manager/templates/crud/list.html:28
+#: task_manager/templates/crud/list.html:58
+#: task_manager/templates/crud/list.html:87
+#: task_manager/templates/crud/list.html:128
+#: task_manager/templates/tasks/task.html:28
+msgid "Creation date"
+msgstr "Дата создания"
+
+#: task_manager/templates/crud/list.html:41
+#: task_manager/templates/crud/list.html:70
+#: task_manager/templates/crud/list.html:99
+#: task_manager/templates/crud/list.html:143
+#: task_manager/templates/tasks/task.html:45
+msgid "Change"
+msgstr "Изменить"
+
+#: task_manager/templates/crud/list.html:57
+#: task_manager/templates/crud/list.html:86
+#: task_manager/templates/crud/list.html:124
+msgid "Name"
+msgstr "Имя"
+
+#: task_manager/templates/crud/list.html:115
+msgid "Display"
+msgstr "Показать"
+
+#: task_manager/templates/crud/list.html:116
+msgid "Clear"
+msgstr "Очистить"
+
+#: task_manager/templates/crud/list.html:125
+msgid "TasksIndexTableStatus"
+msgstr "Статус"
+
+#: task_manager/templates/crud/list.html:126
+msgid "TasksIndexTableAuthor"
+msgstr "Автор"
+
+#: task_manager/templates/crud/list.html:127
+msgid "TasksIndexTablePerformer"
+msgstr "Исполнитель"
+
+#: task_manager/templates/crud/update.html:10
+msgid "Update"
+msgstr "Изменить"
+
+#: task_manager/templates/index.html:16
+msgid "IndexCardTitle"
+msgstr "Привет от Хекслета!"
+
+#: task_manager/templates/index.html:17
+msgid "IndexCardText"
+msgstr "Практические курсы по программированию"
+
+#: task_manager/templates/index.html:19
+msgid "IndexCardButton"
+msgstr "Узнать больше"
+
+#: task_manager/templates/login.html:14
+msgid "LoginTitle"
+msgstr "Вход"
+
+#: task_manager/templates/login.html:18
+msgid "LoginButton"
+msgstr "Войти"
+
+#: task_manager/templates/tasks/task.html:6
+msgid "TaskDetailTitle"
+msgstr "Просмотр задачи"
+
+#: task_manager/templates/tasks/task.html:16
+msgid "TaskDetailAuthor"
+msgstr "Автор"
+
+#: task_manager/templates/tasks/task.html:20
+msgid "TaskDetailPerformer"
+msgstr "Исполнитель"
+
+#: task_manager/templates/tasks/task.html:24
+msgid "TaskDetailStatus"
+msgstr "Статус"
+
+#: task_manager/templates/tasks/task.html:33
+msgid "TaskDetailTags"
+msgstr "Метки:"
+
+#: task_manager/utils/text.py:6
+msgid "UserCreateTitle"
+msgstr "Регистрация"
+
+#: task_manager/utils/text.py:7
+msgid "UsersListTitle"
+msgstr "Пользователи"
+
+#: task_manager/utils/text.py:8
+msgid "UserUpdateTitle"
+msgstr "Изменение пользователя"
+
+#: task_manager/utils/text.py:9
+msgid "UserDeleteTitle"
+msgstr "Удаление пользователя"
+
+#: task_manager/utils/text.py:11
+msgid "StatusCreateTitle"
+msgstr "Создать статус"
+
+#: task_manager/utils/text.py:12
+msgid "StatusesListTitle"
+msgstr "Статусы"
+
+#: task_manager/utils/text.py:13
+msgid "StatusUpdateTitle"
+msgstr "Изменение статуса"
+
+#: task_manager/utils/text.py:14
+msgid "StatusDeleteTitle"
+msgstr "Удаление статуса"
+
+#: task_manager/utils/text.py:16
+msgid "TagCreateTitle"
+msgstr "Создать метку"
+
+#: task_manager/utils/text.py:17
+msgid "TagsListTitle"
+msgstr "Метки"
+
+#: task_manager/utils/text.py:18
+msgid "TagUpdateTitle"
+msgstr "Изменение метки"
+
+#: task_manager/utils/text.py:19
+msgid "TagDeleteTitle"
+msgstr "Удаление метки"
+
+#: task_manager/utils/text.py:21
+msgid "TaskCreateTitle"
+msgstr "Создать задачу"
+
+#: task_manager/utils/text.py:22
+msgid "TasksListTitle"
+msgstr "Задачи"
+
+#: task_manager/utils/text.py:23
+msgid "TaskUpdateTitle"
+msgstr "Изменение задачи"
+
+#: task_manager/utils/text.py:24
+msgid "TaskDeleteTitle"
+msgstr "Удаление задачи"
+
+#: task_manager/utils/text.py:29
+msgid "UserCreateMessageSucc"
+msgstr "Пользователь успешно зарегистрирован"
+
+#: task_manager/utils/text.py:30
+msgid "UserUpdateMessageSucc"
+msgstr "Пользователь успешно изменён"
+
+#: task_manager/utils/text.py:31
+msgid "UserUpdateMessageErr"
+msgstr "У вас нет прав для изменения другого пользователя."
+
+#: task_manager/utils/text.py:32
+msgid "UserDeleteMessageSucc"
+msgstr "Пользователь успешно удалён"
+
+#: task_manager/utils/text.py:33
+msgid "UserDeleteMessageErr"
+msgstr "У вас нет прав для изменения другого пользователя."
+
+#: task_manager/utils/text.py:35
+msgid "UserLoginMessageSucc"
+msgstr "Вы залогинены"
+
+#: task_manager/utils/text.py:36
+msgid "UserLogoutMessageSucc"
+msgstr "Вы разлогинены"
+
+#: task_manager/utils/text.py:38
+msgid "StatusCreateMessageSucc"
+msgstr "Статус успешно создан"
+
+#: task_manager/utils/text.py:39
+msgid "StatusUpdateMessageSucc"
+msgstr "Статус успешно изменён"
+
+#: task_manager/utils/text.py:40
+msgid "StatusDeleteMessageSucc"
+msgstr "Статус успешно удалён"
+
+#: task_manager/utils/text.py:41
+msgid "StatusDeleteMessageErr"
+msgstr "Невозможно удалить статус, потому что он используется"
+
+#: task_manager/utils/text.py:43
+msgid "TagCreateMessageSucc"
+msgstr "Метка успешно создана"
+
+#: task_manager/utils/text.py:44
+msgid "TagUpdateMessageSucc"
+msgstr "Метка успешно изменена"
+
+#: task_manager/utils/text.py:45
+msgid "TagDeleteMessageSucc"
+msgstr "Метка успешно удалена"
+
+#: task_manager/utils/text.py:46
+msgid "TagDeleteMessageErr"
+msgstr "Невозможно удалить метку, потому что она используется"
+
+#: task_manager/utils/text.py:48
+msgid "TaskCreateMessageSucc"
+msgstr "Задача успешно создана"
+
+#: task_manager/utils/text.py:49
+msgid "TaskUpdateMessageSucc"
+msgstr "Задача успешно изменена"
+
+#: task_manager/utils/text.py:50
+msgid "TaskDeleteMessageSucc"
+msgstr "Задача успешно удалена"
+
+#: task_manager/utils/text.py:55
+msgid "StatusCreateBtn"
+msgstr "Создать статус"
+
+#: task_manager/utils/text.py:56
+msgid "TagCreateBtn"
+msgstr "Создать метку"
+
+#: task_manager/utils/text.py:57
+msgid "TaskCreateBtn"
+msgstr "Создать задачу"
+
+#: task_manager/utils/text.py:62
+msgid "UserCreateFormFirstName"
+msgstr "Имя"
+
+#: task_manager/utils/text.py:63
+msgid "UserCreateFormLastName"
+msgstr "Фамилия"
+
+#: task_manager/utils/text.py:65
+msgid "StatusCreateFormName"
+msgstr "Имя"
+
+#: task_manager/utils/text.py:67
+msgid "TagCreateFormName"
+msgstr "Имя"
+
+#: task_manager/utils/text.py:69
+msgid "TaskCreateFormName"
+msgstr "Имя"
+
+#: task_manager/utils/text.py:70
+msgid "TaskCreateFormDescription"
+msgstr "Описание"
+
+#: task_manager/utils/text.py:71
+msgid "TasksFilterStatus"
+msgstr "Статус"
+
+#: task_manager/utils/text.py:72
+msgid "TasksFilterPerformer"
+msgstr "Исполнитель"
+
+#: task_manager/utils/text.py:73
+msgid "TasksFilterTags"
+msgstr "Метка"
+
+#: task_manager/utils/text.py:74
+msgid "TasksFilterSelfTasks"
+msgstr "Только свои задачи"

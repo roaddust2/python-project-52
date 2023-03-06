@@ -7,8 +7,11 @@ from django.views.generic import (
 )
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
+from django.db.models import ProtectedError
 from .forms import StatusForm
-from django.urls import reverse
+from django.shortcuts import redirect
+from django.contrib import messages
+from django.urls import reverse, reverse_lazy
 from task_manager.utils.text import Titles, Messages, Buttons
 
 
@@ -62,15 +65,32 @@ class StatusUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
         return reverse('statuses_index')
 
 
-class StatusDeleteView(LoginRequiredMixin, SuccessMessageMixin, DeleteView):
+class StatusDeleteView(LoginRequiredMixin, DeleteView):
     model = Status
     template_name = 'crud/delete.html'
-    success_message = message.status_delete_succ
+    success_url = reverse_lazy('statuses_index')
 
     def get_context_data(self, **kwargs):
         context = super(StatusDeleteView, self).get_context_data(**kwargs)
         context['delete_title'] = title.status_delete
         return context
-
-    def get_success_url(self):
-        return reverse('statuses_index')
+    
+    def form_valid(self, form):
+        success_url = self.get_success_url()
+        try:
+            self.object.delete()
+            messages.add_message(
+                self.request,
+                messages.SUCCESS,
+                message.status_delete_succ,
+                extra_tags='success'
+            )
+        except ProtectedError:
+            messages.add_message(
+                self.request,
+                messages.SUCCESS,
+                message.status_delete_err,
+                extra_tags='danger'
+            )
+        finally:
+            return redirect(success_url)

@@ -1,0 +1,350 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-06 19:20+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: task_manager/templates/base.html:11
+msgid "Title"
+msgstr "Task manager Hexlet"
+
+#: task_manager/templates/base.html:15
+msgid "BaseNavbarBrand"
+msgstr "Task manager"
+
+#: task_manager/templates/base.html:19
+msgid "BaseNavbarUsers"
+msgstr "Users"
+
+#: task_manager/templates/base.html:23
+msgid "BaseNavbarStatuses"
+msgstr "Statuses"
+
+#: task_manager/templates/base.html:26
+msgid "BaseNavbarTags"
+msgstr "Tags"
+
+#: task_manager/templates/base.html:29
+msgid "BaseNavbarTasks"
+msgstr "Tasks"
+
+#: task_manager/templates/base.html:36
+msgid "BaseNavbarSignOut"
+msgstr "Sign out"
+
+#: task_manager/templates/base.html:42
+msgid "BaseNavbarSignIn"
+msgstr "Sign in"
+
+#: task_manager/templates/base.html:45
+msgid "BaseNavbarSignUp"
+msgstr "Sign up"
+
+#: task_manager/templates/crud/create.html:10
+msgid "Create"
+msgstr "Create"
+
+#: task_manager/templates/crud/delete.html:11
+#: task_manager/templates/crud/list.html:43
+#: task_manager/templates/crud/list.html:72
+#: task_manager/templates/crud/list.html:101
+#: task_manager/templates/crud/list.html:145
+#: task_manager/templates/tasks/task.html:47
+msgid "Delete"
+msgstr "Delete"
+
+#: task_manager/templates/crud/list.html:26
+msgid "UsersIndexTableUsername"
+msgstr "Username"
+
+#: task_manager/templates/crud/list.html:27
+msgid "UsersIndexTableUsernameFull"
+msgstr "Full name"
+
+#: task_manager/templates/crud/list.html:28
+#: task_manager/templates/crud/list.html:58
+#: task_manager/templates/crud/list.html:87
+#: task_manager/templates/crud/list.html:128
+#: task_manager/templates/tasks/task.html:28
+msgid "Creation date"
+msgstr "Creation date"
+
+#: task_manager/templates/crud/list.html:41
+#: task_manager/templates/crud/list.html:70
+#: task_manager/templates/crud/list.html:99
+#: task_manager/templates/crud/list.html:143
+#: task_manager/templates/tasks/task.html:45
+msgid "Change"
+msgstr "Change"
+
+#: task_manager/templates/crud/list.html:57
+#: task_manager/templates/crud/list.html:86
+#: task_manager/templates/crud/list.html:124
+msgid "Name"
+msgstr "Name"
+
+#: task_manager/templates/crud/list.html:115
+msgid "Display"
+msgstr "Display"
+
+#: task_manager/templates/crud/list.html:116
+msgid "Clear"
+msgstr "Clear"
+
+#: task_manager/templates/crud/list.html:125
+msgid "TasksIndexTableStatus"
+msgstr "Status"
+
+#: task_manager/templates/crud/list.html:126
+msgid "TasksIndexTableAuthor"
+msgstr "Author"
+
+#: task_manager/templates/crud/list.html:127
+msgid "TasksIndexTablePerformer"
+msgstr "Performer"
+
+#: task_manager/templates/crud/update.html:10
+msgid "Update"
+msgstr "Update"
+
+#: task_manager/templates/index.html:16
+msgid "IndexCardTitle"
+msgstr "Hello from Hexlet!"
+
+#: task_manager/templates/index.html:17
+msgid "IndexCardText"
+msgstr "Practical programming courses"
+
+#: task_manager/templates/index.html:19
+msgid "IndexCardButton"
+msgstr "Learn more"
+
+#: task_manager/templates/login.html:14
+msgid "LoginTitle"
+msgstr "Sign in"
+
+#: task_manager/templates/login.html:18
+msgid "LoginButton"
+msgstr "Login"
+
+#: task_manager/templates/tasks/task.html:6
+msgid "TaskDetailTitle"
+msgstr "Task view"
+
+#: task_manager/templates/tasks/task.html:16
+msgid "TaskDetailAuthor"
+msgstr "Author"
+
+#: task_manager/templates/tasks/task.html:20
+msgid "TaskDetailPerformer"
+msgstr "Performer"
+
+#: task_manager/templates/tasks/task.html:24
+msgid "TaskDetailStatus"
+msgstr "Status"
+
+#: task_manager/templates/tasks/task.html:33
+msgid "TaskDetailTags"
+msgstr "Tags:"
+
+#: task_manager/utils/text.py:6
+msgid "UserCreateTitle"
+msgstr "Sign up"
+
+#: task_manager/utils/text.py:7
+msgid "UsersListTitle"
+msgstr "Users"
+
+#: task_manager/utils/text.py:8
+msgid "UserUpdateTitle"
+msgstr "Change user"
+
+#: task_manager/utils/text.py:9
+msgid "UserDeleteTitle"
+msgstr "Delete user"
+
+#: task_manager/utils/text.py:11
+msgid "StatusCreateTitle"
+msgstr "Create status"
+
+#: task_manager/utils/text.py:12
+msgid "StatusesListTitle"
+msgstr "Statuses"
+
+#: task_manager/utils/text.py:13
+msgid "StatusUpdateTitle"
+msgstr "Change status"
+
+#: task_manager/utils/text.py:14
+msgid "StatusDeleteTitle"
+msgstr "Delete status"
+
+#: task_manager/utils/text.py:16
+msgid "TagCreateTitle"
+msgstr "Create tag"
+
+#: task_manager/utils/text.py:17
+msgid "TagsListTitle"
+msgstr "Tags"
+
+#: task_manager/utils/text.py:18
+msgid "TagUpdateTitle"
+msgstr "Change tag"
+
+#: task_manager/utils/text.py:19
+msgid "TagDeleteTitle"
+msgstr "Delete tag"
+
+#: task_manager/utils/text.py:21
+msgid "TaskCreateTitle"
+msgstr "Create task"
+
+#: task_manager/utils/text.py:22
+msgid "TasksListTitle"
+msgstr "Tasks"
+
+#: task_manager/utils/text.py:23
+msgid "TaskUpdateTitle"
+msgstr "Change task"
+
+#: task_manager/utils/text.py:24
+msgid "TaskDeleteTitle"
+msgstr "Delete task"
+
+#: task_manager/utils/text.py:29
+msgid "UserCreateMessageSucc"
+msgstr "User successfully registered"
+
+#: task_manager/utils/text.py:30
+msgid "UserUpdateMessageSucc"
+msgstr "User changed successfully"
+
+#: task_manager/utils/text.py:31
+msgid "UserUpdateMessageErr"
+msgstr "You do not have permission to change another user."
+
+#: task_manager/utils/text.py:32
+msgid "UserDeleteMessageSucc"
+msgstr "User deleted successfully"
+
+#: task_manager/utils/text.py:33
+msgid "UserDeleteMessageErr"
+msgstr "You do not have permission to change another user."
+
+#: task_manager/utils/text.py:35
+msgid "UserLoginMessageSucc"
+msgstr "You are logged in"
+
+#: task_manager/utils/text.py:36
+msgid "UserLogoutMessageSucc"
+msgstr "You are logged out"
+
+#: task_manager/utils/text.py:38
+msgid "StatusCreateMessageSucc"
+msgstr "Status created successfully"
+
+#: task_manager/utils/text.py:39
+msgid "StatusUpdateMessageSucc"
+msgstr "Status changed successfully"
+
+#: task_manager/utils/text.py:40
+msgid "StatusDeleteMessageSucc"
+msgstr "Status deleted successfully"
+
+#: task_manager/utils/text.py:41
+msgid "StatusDeleteMessageErr"
+msgstr "Can't delete status because it's in use"
+
+#: task_manager/utils/text.py:43
+msgid "TagCreateMessageSucc"
+msgstr "Tag created successfully"
+
+#: task_manager/utils/text.py:44
+msgid "TagUpdateMessageSucc"
+msgstr "Tag changed successfully"
+
+#: task_manager/utils/text.py:45
+msgid "TagDeleteMessageSucc"
+msgstr "Tag deleted successfully"
+
+#: task_manager/utils/text.py:46
+msgid "TagDeleteMessageErr"
+msgstr "Can't delete label because it's in use"
+
+#: task_manager/utils/text.py:48
+msgid "TaskCreateMessageSucc"
+msgstr "Task created successfully"
+
+#: task_manager/utils/text.py:49
+msgid "TaskUpdateMessageSucc"
+msgstr "Task changed successfully"
+
+#: task_manager/utils/text.py:50
+msgid "TaskDeleteMessageSucc"
+msgstr "Task deleted successfully"
+
+#: task_manager/utils/text.py:55
+msgid "StatusCreateBtn"
+msgstr "Create status"
+
+#: task_manager/utils/text.py:56
+msgid "TagCreateBtn"
+msgstr "Create tag"
+
+#: task_manager/utils/text.py:57
+msgid "TaskCreateBtn"
+msgstr "Create task"
+
+#: task_manager/utils/text.py:62
+msgid "UserCreateFormFirstName"
+msgstr "First name"
+
+#: task_manager/utils/text.py:63
+msgid "UserCreateFormLastName"
+msgstr "Last name"
+
+#: task_manager/utils/text.py:65
+msgid "StatusCreateFormName"
+msgstr "Name"
+
+#: task_manager/utils/text.py:67
+msgid "TagCreateFormName"
+msgstr "Name"
+
+#: task_manager/utils/text.py:69
+msgid "TaskCreateFormName"
+msgstr "Name"
+
+#: task_manager/utils/text.py:70
+msgid "TaskCreateFormDescription"
+msgstr "Description"
+
+#: task_manager/utils/text.py:71
+msgid "TasksFilterStatus"
+msgstr "Status"
+
+#: task_manager/utils/text.py:72
+msgid "TasksFilterPerformer"
+msgstr "Performer"
+
+#: task_manager/utils/text.py:73
+msgid "TasksFilterTags"
+msgstr "Tags"
+
+#: task_manager/utils/text.py:74
+msgid "TasksFilterSelfTasks"
+msgstr "Only my tasks"

@@ -7,8 +7,11 @@ from django.views.generic import (
 )
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
+from django.db.models import ProtectedError
 from task_manager.apps.tags.forms import TagForm
-from django.urls import reverse
+from django.shortcuts import redirect
+from django.contrib import messages
+from django.urls import reverse, reverse_lazy
 from task_manager.utils.text import Titles, Messages, Buttons
 
 
@@ -61,11 +64,28 @@ class TagUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     def get_success_url(self):
         return reverse('tags_index')
 
-
-class TagDeleteView(LoginRequiredMixin, SuccessMessageMixin, DeleteView):
+# TODO create delete protection for used tags
+class TagDeleteView(LoginRequiredMixin, DeleteView):
     model = Tag
     template_name = 'crud/delete.html'
-    success_message = message.tag_delete_succ
+    success_url = reverse_lazy('tags_index')
 
-    def get_success_url(self):
-        return reverse('tags_index')
+    def form_valid(self, form):
+        success_url = self.get_success_url()
+        try:
+            self.object.delete()
+            messages.add_message(
+                self.request,
+                messages.SUCCESS,
+                message.tag_delete_succ,
+                extra_tags='success'
+            )
+        except ProtectedError:
+            messages.add_message(
+                self.request,
+                messages.SUCCESS,
+                message.tag_delete_err,
+                extra_tags='danger'
+            )
+        finally:
+            return redirect(success_url)
