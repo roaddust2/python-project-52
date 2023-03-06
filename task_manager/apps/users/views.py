@@ -25,7 +25,7 @@ class UsersListView(ListView):
     def get_context_data(self, **kwargs):
         context = super(UsersListView, self).get_context_data(**kwargs)
         context['users_list'] = True
-        context['list_title'] = title.users_read
+        context['list_title'] = title.users_list
         return context
 
 

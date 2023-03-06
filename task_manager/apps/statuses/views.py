@@ -1,5 +1,4 @@
-from django.urls import reverse
-from django.utils.translation import gettext_lazy as _
+from task_manager.apps.statuses.models import Status
 from django.views.generic import (
     ListView,
     CreateView,
@@ -8,8 +7,14 @@ from django.views.generic import (
 )
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
-from task_manager.apps.statuses.models import Status
-from task_manager.apps.statuses.forms import StatusForm
+from .forms import StatusForm
+from django.urls import reverse
+from task_manager.utils.text import Titles, Messages, Buttons
+
+
+title = Titles()
+message = Messages()
+button = Buttons()
 
 
 class StatusesListView(LoginRequiredMixin, ListView):
@@ -19,20 +24,23 @@ class StatusesListView(LoginRequiredMixin, ListView):
 
     def get_context_data(self, **kwargs):
         context = super(StatusesListView, self).get_context_data(**kwargs)
-        context['list_title'] = _('StatusesListTitle')
-        context['create_button'] = {"url": 'statuses_create', "name": _('StatusesListButtonName')}
         context['statuses_list'] = True
+        context['list_title'] = title.statuses_list
+        context['create_button'] = {
+            "url": 'statuses_create',
+            "name": button.statuses_create_btn
+        }
         return context
 
 
 class StatusCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     form_class = StatusForm
     template_name = 'crud/create.html'
-    success_message = _('StatusCreateAlertSuccess')
+    success_message = message.status_create_succ
 
     def get_context_data(self, **kwargs):
         context = super(StatusCreateView, self).get_context_data(**kwargs)
-        context['create_title'] = _('StatusCreateTitle')
+        context['create_title'] = title.status_create
         return context
 
     def get_success_url(self):
@@ -43,11 +51,11 @@ class StatusUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Status
     form_class = StatusForm
     template_name = 'crud/update.html'
-    success_message = _('StatusUpdateAlertSuccess')
+    success_message = message.status_update_succ
 
     def get_context_data(self, **kwargs):
         context = super(StatusUpdateView, self).get_context_data(**kwargs)
-        context['update_title'] = _('StatusUpdateTitle')
+        context['update_title'] = title.status_update
         return context
 
     def get_success_url(self):
@@ -57,7 +65,7 @@ class StatusUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
 class StatusDeleteView(LoginRequiredMixin, SuccessMessageMixin, DeleteView):
     model = Status
     template_name = 'crud/delete.html'
-    success_message = _('StatusDeleteAlertSuccess')
+    success_message = message.status_delete_succ
 
     def get_success_url(self):
         return reverse('statuses_index')
