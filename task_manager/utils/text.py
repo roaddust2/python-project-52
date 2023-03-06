@@ -53,3 +53,16 @@ class Buttons:
         self.status_create_btn = _('StatusCreateBtn')
         self.tag_create_btn = _('TagCreateBtn')
         self.task_create_btn = _('TaskCreateBtn')
+
+
+class FormFields:
+    def __init__(self):
+        self.user_create_first_name = _('UserCreateFormFirstName')
+        self.user_create_last_name = _('UserCreateFormLastName')
+
+        self.status_create_name = _('StatusCreateFormName')
+
+        self.tag_create_name = _('TagCreateFormName')
+
+        self.task_create_name = _('TaskCreateFormName')
+        self.task_create_description = _('TaskCreateFormDescription')

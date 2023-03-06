@@ -1,10 +1,17 @@
+from .models import Status
 from django import forms
-from django.utils.translation import gettext_lazy as _
-from task_manager.apps.statuses.models import Status
+from task_manager.utils.text import FormFields
+
+
+field = FormFields()
 
 
 class StatusForm(forms.ModelForm):
-    name = forms.CharField(max_length=30, required=True, label=_('StatusFormName'))
+    name = forms.CharField(
+        max_length=30,
+        required=True,
+        label=field.status_create_name
+    )
 
     class Meta:
         model = Status
