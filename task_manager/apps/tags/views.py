@@ -1,4 +1,6 @@
+from django.db import IntegrityError
 from .models import Tag
+from task_manager.apps.tasks.models import Task
 from django.views.generic import (
     ListView,
     CreateView,
@@ -64,7 +66,7 @@ class TagUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     def get_success_url(self):
         return reverse('tags_index')
 
-# TODO create delete protection for used tags
+
 class TagDeleteView(LoginRequiredMixin, DeleteView):
     model = Tag
     template_name = 'crud/delete.html'
@@ -73,6 +75,9 @@ class TagDeleteView(LoginRequiredMixin, DeleteView):
     def form_valid(self, form):
         success_url = self.get_success_url()
         try:
+            tag = self.get_object()
+            if Task.objects.filter(tags=tag).exists():
+                raise IntegrityError
             self.object.delete()
             messages.add_message(
                 self.request,
@@ -80,7 +85,7 @@ class TagDeleteView(LoginRequiredMixin, DeleteView):
                 message.tag_delete_succ,
                 extra_tags='success'
             )
-        except ProtectedError:
+        except IntegrityError:
             messages.add_message(
                 self.request,
                 messages.SUCCESS,
