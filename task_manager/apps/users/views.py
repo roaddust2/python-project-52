@@ -6,6 +6,7 @@ from django.views.generic import (
     DeleteView,
 )
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.contrib.messages.views import SuccessMessageMixin
 from .forms import CustomUserCreationForm
 from django.contrib import messages
 from django.shortcuts import redirect
@@ -29,9 +30,10 @@ class UsersListView(ListView):
         return context
 
 
-class UserCreateView(CreateView):
+class UserCreateView(SuccessMessageMixin, CreateView):
     form_class = CustomUserCreationForm
     template_name = 'crud/create.html'
+    success_message = message.user_create_succ
 
     def get_context_data(self, **kwargs):
         context = super(UserCreateView, self).get_context_data(**kwargs)
@@ -39,19 +41,14 @@ class UserCreateView(CreateView):
         return context
 
     def get_success_url(self):
-        messages.add_message(
-            self.request,
-            messages.SUCCESS,
-            message.user_create_succ,
-            extra_tags='success'
-        )
         return reverse('login')
 
 
-class UserUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+class UserUpdateView(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMixin, UpdateView):
     model = User
     form_class = CustomUserCreationForm
     template_name = 'crud/update.html'
+    success_message = message.user_update_succ
 
     def get_context_data(self, **kwargs):
         context = super(UserUpdateView, self).get_context_data(**kwargs)
@@ -72,18 +69,13 @@ class UserUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         return redirect('users_index')
 
     def get_success_url(self):
-        messages.add_message(
-            self.request,
-            messages.SUCCESS,
-            message.user_update_succ,
-            extra_tags='success'
-        )
         return reverse('users_index')
 
 
-class UserDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+class UserDeleteView(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMixin, DeleteView):
     model = User
     template_name = 'crud/delete.html'
+    success_message = message.user_delete_succ
 
     def get_context_data(self, **kwargs):
         context = super(UserDeleteView, self).get_context_data(**kwargs)
@@ -104,10 +96,4 @@ class UserDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         return redirect('users_index')
 
     def get_success_url(self):
-        messages.add_message(
-            self.request,
-            messages.SUCCESS,
-            message.user_delete_succ,
-            extra_tags='danger'
-        )
         return reverse('users_index')
