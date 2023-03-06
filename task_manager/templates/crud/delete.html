@@ -5,10 +5,10 @@
 {% block content %}
 <h1 class="my-4">{{ delete_title }}</h1>
 <form method="post">{% csrf_token %}
-    <p>Delete {{ object.name }}?</p>
+    <p>{% translate 'DeleteText' %} {{ object.name }}?</p>
     {% bootstrap_form form %}
     {% buttons %}
-    <button class="btn btn-danger" type="submit">{% translate 'Delete' %}</button>
+    <button class="btn btn-danger" type="submit">{% translate 'DeleteBtn' %}</button>
     {% endbuttons %}
 </form>
 {% endblock %}

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-06 19:20+0400\n"
+"POT-Creation-Date: 2023-03-06 19:25+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -60,14 +60,13 @@ msgstr "Регистрация"
 msgid "Create"
 msgstr "Создать"
 
+#: task_manager/templates/crud/delete.html:8
+msgid "DeleteText"
+msgstr "Вы уверены, что хотите удалить"
+
 #: task_manager/templates/crud/delete.html:11
-#: task_manager/templates/crud/list.html:43
-#: task_manager/templates/crud/list.html:72
-#: task_manager/templates/crud/list.html:101
-#: task_manager/templates/crud/list.html:145
-#: task_manager/templates/tasks/task.html:47
-msgid "Delete"
-msgstr "Удалить"
+msgid "DeleteBtn"
+msgstr "Да, удалить"
 
 #: task_manager/templates/crud/list.html:26
 msgid "UsersIndexTableUsername"
@@ -92,6 +91,14 @@ msgstr "Дата создания"
 #: task_manager/templates/tasks/task.html:45
 msgid "Change"
 msgstr "Изменить"
+
+#: task_manager/templates/crud/list.html:43
+#: task_manager/templates/crud/list.html:72
+#: task_manager/templates/crud/list.html:101
+#: task_manager/templates/crud/list.html:145
+#: task_manager/templates/tasks/task.html:47
+msgid "Delete"
+msgstr "Удалить"
 
 #: task_manager/templates/crud/list.html:57
 #: task_manager/templates/crud/list.html:86
