@@ -7,8 +7,8 @@ from django.views.generic import (
 )
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
-from django.urls import reverse
 from task_manager.apps.tags.forms import TagForm
+from django.urls import reverse
 from task_manager.utils.text import Titles, Messages, Buttons
 
 

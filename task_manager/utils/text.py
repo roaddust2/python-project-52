@@ -18,6 +18,11 @@ class Titles:
         self.tag_update = _('TagUpdateTitle')
         self.tag_delete = _('TagDeleteTitle')
 
+        self.task_create = _('TaskCreateTitle')
+        self.tasks_list = _('TasksListTitle')
+        self.task_update = _('TaskUpdateTitle')
+        self.task_delete = _('TaskDeleteTitle')
+
 
 class Messages:
     def __init__(self):
@@ -38,8 +43,13 @@ class Messages:
         self.tag_update_succ = _('TagUpdateMessageSucc')
         self.tag_delete_succ = _('TagDeleteMessageSucc')
 
+        self.task_create_succ = _('TaskCreateMessageSucc')
+        self.task_update_succ = _('TaskUpdateMessageSucc')
+        self.task_delete_succ = _('TaskDeleteMessageSucc')
+
 
 class Buttons:
     def __init__(self):
         self.status_create_btn = _('StatusCreateBtn')
         self.tag_create_btn = _('TagCreateBtn')
+        self.task_create_btn = _('TaskCreateBtn')
