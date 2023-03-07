@@ -11,9 +11,15 @@ from task_manager.utils.text import Messages
 
 message = Messages()
 
+from django.shortcuts import render
+from django.http import HttpResponse
 
-class MainPageView(TemplateView):
-    template_name = 'index.html'
+def index(request):
+    a = None
+    a.hello() # Creating an error with an invalid line of code
+    return HttpResponse("Hello, world. You're at the pollapp index.")
+# class MainPageView(TemplateView):
+#     template_name = 'index.html'
 
 
 class CustomLoginView(SuccessMessageMixin, LoginView):
