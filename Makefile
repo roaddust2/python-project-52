@@ -6,10 +6,10 @@ lint:
 	$(ENV) flake8 task_manager
 
 test:
-	$(ENV) pytest --cov=gendiff
+	$(ENV) pytest --cov-config=setup.cfg
 
 test-coverage:
-	$(ENV) pytest --cov=gendiff --cov-report xml
+	$(ENV) pytest --cov-config=setup.cfg --cov-report xml
 
 makemessages:
 	$(ENV) django-admin makemessages -l en
@@ -28,4 +28,6 @@ dev:
 	$(MANAGE) runserver
 
 prod:
+	$(ENV) $(MANAGE) makemigrations
+	$(ENV) $(MANAGE) migrate
 	$(ENV) gunicorn -b 0.0.0.0:$(PORT) task_manager.wsgi

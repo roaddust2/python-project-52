@@ -7,7 +7,7 @@ from django import forms
 from task_manager.utils.text import FormFields
 
 
-field= FormFields()
+field = FormFields()
 
 
 class TasksFilterSet(FilterSet):
@@ -64,7 +64,7 @@ class TasksFilterSet(FilterSet):
         ),
         method='self_tasks_filter',
     )
-    
+
     class Meta:
         model = Task
         fields = ['status', 'performer', 'tags']

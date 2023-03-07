@@ -9,7 +9,6 @@ from django.views.generic import (
 )
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
-from django.db.models import ProtectedError
 from task_manager.apps.tags.forms import TagForm
 from django.shortcuts import redirect
 from django.contrib import messages

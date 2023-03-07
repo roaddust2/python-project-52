@@ -74,7 +74,7 @@ class StatusDeleteView(LoginRequiredMixin, DeleteView):
         context = super(StatusDeleteView, self).get_context_data(**kwargs)
         context['delete_title'] = title.status_delete
         return context
-    
+
     def form_valid(self, form):
         success_url = self.get_success_url()
         try:
