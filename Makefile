@@ -2,6 +2,10 @@ PORT ?= 8000
 ENV=poetry run
 MANAGE=$(ENV) python3 manage.py
 
+install:
+	poetry install
+	cat requirements.txt | xargs poetry add
+
 lint:
 	$(ENV) flake8 task_manager
 
@@ -28,6 +32,8 @@ dev:
 	$(MANAGE) runserver
 
 prod:
+	poetry install
+	cat requirements.txt | xargs poetry add
 	$(ENV) $(MANAGE) makemigrations
 	$(ENV) $(MANAGE) migrate
 	$(ENV) gunicorn -b 0.0.0.0:$(PORT) task_manager.wsgi
