@@ -38,6 +38,9 @@ ALLOWED_HOSTS = [
     'webserver',
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://python-project-52-production-4da7.up.railway.app',
+]
 
 # Application definition
 
