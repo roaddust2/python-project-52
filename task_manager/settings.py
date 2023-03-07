@@ -38,6 +38,10 @@ ALLOWED_HOSTS = [
     'webserver',
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://*railway.app',
+    'https://python-project-52-production-4da7.up.railway.app'
+]
 
 # Application definition
 
@@ -48,6 +52,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
     'bootstrap4',
     'django_filters',
     'task_manager',
@@ -67,6 +72,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     "whitenoise.middleware.WhiteNoiseMiddleware",
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'task_manager.urls'
