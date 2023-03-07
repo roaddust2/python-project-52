@@ -18,7 +18,7 @@ from django.urls import path, include
 from task_manager import views
 
 urlpatterns = [
-    path('', views.MainPageView.as_view(), name='index'),
+    path('', views.index, name='index'),
     path('users/', include('task_manager.apps.users.urls')),
     path('statuses/', include('task_manager.apps.statuses.urls')),
     path('tags/', include('task_manager.apps.tags.urls')),
