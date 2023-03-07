@@ -36,25 +36,29 @@ ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     'webserver',
+    '0.0.0.0',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
+    'https://python-project-52-production-4da7.up.railway.app',
     'https://*railway.app',
-    'https://python-project-52-production-4da7.up.railway.app'
 ]
 
 # Application definition
 
 INSTALLED_APPS = [
+    # Django contrib apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    "corsheaders",
+    # Third-party apps
+    'corsheaders',
     'bootstrap4',
     'django_filters',
+    # Project apps
     'task_manager',
     'task_manager.apps.users',
     'task_manager.apps.statuses',
