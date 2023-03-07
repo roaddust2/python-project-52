@@ -32,7 +32,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = os.getenv('DEBUG')
 
 ALLOWED_HOSTS = [
-    'python-project-52-production-2ee7.up.railway.app',
+    'python-project-52-production-4da7.up.railway.app',
     'localhost',
     '127.0.0.1',
     'webserver',
