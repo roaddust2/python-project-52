@@ -72,8 +72,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    "whitenoise.middleware.WhiteNoiseMiddleware",
-    # 'rollbar.contrib.django.middleware.RollbarNotifierMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    'rollbar.contrib.django.middleware.RollbarNotifierMiddleware',
 ]
 
 ROOT_URLCONF = 'task_manager.urls'
@@ -105,6 +105,12 @@ WSGI_APPLICATION = 'task_manager.wsgi.application'
 DATABASES = {
     'default': dj_database_url.config(conn_max_age=600)
 }
+
+if DEBUG:
+    DATABASES['default'] = {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 
 # Autentification
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth
@@ -160,9 +166,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # # Rollbar
 # # https://app.rollbar.com
 
-# ROLLBAR = {
-#     'access_token': '59517d4d93d9486eb06d58f9ca26fc43',
-#     'environment': 'development' if os.getenv('DEBUG') else 'production',
-#     'code_version': '1.0',
-#     'root': BASE_DIR,
-# }
+ROLLBAR = {
+    'access_token': os.getenv('ROLLBAR'),
+    'environment': 'development' if os.getenv('DEBUG') else 'production',
+    'code_version': '1.0',
+    'root': BASE_DIR,
+}
