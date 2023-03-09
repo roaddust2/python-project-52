@@ -168,7 +168,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 ROLLBAR = {
     'access_token': os.getenv('ROLLBAR'),
-    'environment': 'development' if os.getenv('DEBUG') else 'production',
+    'environment': 'development' if DEBUG else 'production',
     'code_version': '1.0',
     'root': BASE_DIR,
 }
