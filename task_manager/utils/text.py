@@ -56,6 +56,7 @@ class Buttons:
         self.status_create_btn = _('StatusCreateBtn')
         self.tag_create_btn = _('TagCreateBtn')
         self.task_create_btn = _('TaskCreateBtn')
+        self.user_create_btn = _('UserCreateBtn')
 
 
 class FormFields:

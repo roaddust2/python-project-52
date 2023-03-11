@@ -11,11 +11,12 @@ from .forms import CustomUserCreationForm
 from django.contrib import messages
 from django.shortcuts import redirect
 from django.urls import reverse
-from task_manager.utils.text import Titles, Messages
+from task_manager.utils.text import Titles, Messages, Buttons
 
 
 title = Titles()
 message = Messages()
+button = Buttons()
 
 
 class UsersListView(ListView):
@@ -38,6 +39,7 @@ class UserCreateView(SuccessMessageMixin, CreateView):
     def get_context_data(self, **kwargs):
         context = super(UserCreateView, self).get_context_data(**kwargs)
         context['create_title'] = title.user_create
+        context['create_button'] = button.user_create_btn
         return context
 
     def get_success_url(self):
