@@ -2,6 +2,9 @@ PORT ?= 8000
 ENV=poetry run
 MANAGE=$(ENV) python3 manage.py
 
+install:
+	poetry install
+
 lint:
 	$(ENV) flake8 task_manager
 
