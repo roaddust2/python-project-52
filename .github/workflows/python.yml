@@ -6,6 +6,7 @@ on:
 env:
   SECRET_KEY: ${{ vars.SECRET_KEY }}
   DEBUG: ${{ vars.DEBUG }}
+  CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
 
 jobs:
   build:
@@ -31,7 +32,6 @@ jobs:
           make test
       - name: Test & publish code coverage
         uses: paambaati/codeclimate-action@v3.2.0
-        env:
-          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
         with:
           coverageCommand: make test-coverage
+          debug: true
