@@ -79,5 +79,10 @@ class TaskDeleteView(LoginRequiredMixin, SuccessMessageMixin, DeleteView):
     template_name = 'crud/delete.html'
     success_message = message.task_delete_succ
 
+    def get_context_data(self, **kwargs):
+        context = super(TaskDeleteView, self).get_context_data(**kwargs)
+        context['delete_title'] = title.task_delete
+        return context
+
     def get_success_url(self):
         return reverse('tasks_index')

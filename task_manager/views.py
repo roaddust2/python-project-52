@@ -7,7 +7,6 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse
 from django.contrib import messages
 from task_manager.utils.text import Messages
-from django.http import HttpResponse
 
 
 message = Messages()

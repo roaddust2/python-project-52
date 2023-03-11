@@ -71,6 +71,11 @@ class TagDeleteView(LoginRequiredMixin, DeleteView):
     template_name = 'crud/delete.html'
     success_url = reverse_lazy('tags_index')
 
+    def get_context_data(self, **kwargs):
+        context = super(TagDeleteView, self).get_context_data(**kwargs)
+        context['delete_title'] = title.tag_delete
+        return context
+
     def form_valid(self, form):
         success_url = self.get_success_url()
         try:
