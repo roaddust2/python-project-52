@@ -9,10 +9,12 @@ lint:
 	$(ENV) flake8 task_manager
 
 test:
-	$(ENV) pytest --cov-config=setup.cfg
+	$(ENV) pytest
 
 test-coverage:
-	$(ENV) pytest --cov-config=setup.cfg --cov-report xml
+	$(ENV) coverage run -m pytest tests
+	$(ENV) coverage report --omit=*/tests/*,*/migrations/*
+	$(ENV) coverage xml --omit=*/tests/*,*/migrations/*
 
 makemessages:
 	$(ENV) django-admin makemessages -l en
