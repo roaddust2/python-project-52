@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-11 17:21+0400\n"
+"POT-Creation-Date: 2023-03-11 18:11+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -304,66 +304,70 @@ msgstr "Task changed successfully"
 msgid "TaskDeleteMessageSucc"
 msgstr "Task deleted successfully"
 
-#: task_manager/utils/text.py:55
+#: task_manager/utils/text.py:51
+msgid "TaskDeleteMessageErr"
+msgstr "A task can only be deleted by its author"
+
+#: task_manager/utils/text.py:56
 msgid "StatusCreateBtn"
 msgstr "Create status"
 
-#: task_manager/utils/text.py:56
+#: task_manager/utils/text.py:57
 msgid "TagCreateBtn"
 msgstr "Create tag"
 
-#: task_manager/utils/text.py:57
+#: task_manager/utils/text.py:58
 msgid "TaskCreateBtn"
 msgstr "Create task"
 
-#: task_manager/utils/text.py:62
+#: task_manager/utils/text.py:63
 msgid "UserCreateFormFirstName"
 msgstr "First name"
 
-#: task_manager/utils/text.py:63
+#: task_manager/utils/text.py:64
 msgid "UserCreateFormLastName"
 msgstr "Last name"
 
-#: task_manager/utils/text.py:65
+#: task_manager/utils/text.py:66
 msgid "StatusCreateFormName"
 msgstr "Name"
 
-#: task_manager/utils/text.py:67
+#: task_manager/utils/text.py:68
 msgid "TagCreateFormName"
 msgstr "Name"
 
-#: task_manager/utils/text.py:69
+#: task_manager/utils/text.py:70
 msgid "TaskCreateFormName"
 msgstr "Name"
 
-#: task_manager/utils/text.py:70
+#: task_manager/utils/text.py:71
 msgid "TaskCreateFormDescription"
 msgstr "Description"
 
-#: task_manager/utils/text.py:71
+#: task_manager/utils/text.py:72
 msgid "TaskCreateFormPerformer"
 msgstr "Performer"
 
-#: task_manager/utils/text.py:72
+#: task_manager/utils/text.py:73
 msgid "TaskCreateFormStatus"
 msgstr "Status"
 
-#: task_manager/utils/text.py:73
+#: task_manager/utils/text.py:74
 msgid "TaskCreateFormTags"
 msgstr "Tags"
 
-#: task_manager/utils/text.py:74
+#: task_manager/utils/text.py:75
 msgid "TasksFilterStatus"
 msgstr "Status"
 
-#: task_manager/utils/text.py:75
+#: task_manager/utils/text.py:76
 msgid "TasksFilterPerformer"
 msgstr "Performer"
 
-#: task_manager/utils/text.py:76
+#: task_manager/utils/text.py:77
 msgid "TasksFilterTags"
 msgstr "Tags"
 
-#: task_manager/utils/text.py:77
+#: task_manager/utils/text.py:78
 msgid "TasksFilterSelfTasks"
 msgstr "Only my tasks"

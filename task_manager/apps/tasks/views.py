@@ -7,8 +7,10 @@ from django.views.generic import (
 )
 from django_filters.views import FilterView
 from .filters import TasksFilterSet
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.messages.views import SuccessMessageMixin
+from django.contrib import messages
+from django.shortcuts import redirect
 from django.urls import reverse
 from task_manager.utils.text import Titles, Messages, Buttons
 
@@ -74,7 +76,7 @@ class TaskUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
         return reverse('tasks_index')
 
 
-class TaskDeleteView(LoginRequiredMixin, SuccessMessageMixin, DeleteView):
+class TaskDeleteView(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMixin, DeleteView):
     model = Task
     template_name = 'crud/delete.html'
     success_message = message.task_delete_succ
@@ -83,6 +85,19 @@ class TaskDeleteView(LoginRequiredMixin, SuccessMessageMixin, DeleteView):
         context = super(TaskDeleteView, self).get_context_data(**kwargs)
         context['delete_title'] = title.task_delete
         return context
+    
+    def test_func(self):
+        obj = self.get_object()
+        return obj.author == self.request.user
+
+    def handle_no_permission(self):
+        messages.add_message(
+            self.request,
+            messages.ERROR,
+            message.task_delete_err,
+            extra_tags='danger'
+        )
+        return redirect('tasks_index')
 
     def get_success_url(self):
         return reverse('tasks_index')

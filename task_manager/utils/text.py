@@ -48,6 +48,7 @@ class Messages:
         self.task_create_succ = _('TaskCreateMessageSucc')
         self.task_update_succ = _('TaskUpdateMessageSucc')
         self.task_delete_succ = _('TaskDeleteMessageSucc')
+        self.task_delete_err = _('TaskDeleteMessageErr')
 
 
 class Buttons:
