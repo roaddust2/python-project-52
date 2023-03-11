@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-06 19:25+0400\n"
+"POT-Creation-Date: 2023-03-11 17:21+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -343,17 +343,29 @@ msgid "TaskCreateFormDescription"
 msgstr "Описание"
 
 #: task_manager/utils/text.py:71
+msgid "TaskCreateFormPerformer"
+msgstr "Исполнитель"
+
+#: task_manager/utils/text.py:72
+msgid "TaskCreateFormStatus"
+msgstr "Статус"
+
+#: task_manager/utils/text.py:73
+msgid "TaskCreateFormTags"
+msgstr "Метки"
+
+#: task_manager/utils/text.py:74
 msgid "TasksFilterStatus"
 msgstr "Статус"
 
-#: task_manager/utils/text.py:72
+#: task_manager/utils/text.py:75
 msgid "TasksFilterPerformer"
 msgstr "Исполнитель"
 
-#: task_manager/utils/text.py:73
+#: task_manager/utils/text.py:76
 msgid "TasksFilterTags"
 msgstr "Метка"
 
-#: task_manager/utils/text.py:74
+#: task_manager/utils/text.py:77
 msgid "TasksFilterSelfTasks"
 msgstr "Только свои задачи"

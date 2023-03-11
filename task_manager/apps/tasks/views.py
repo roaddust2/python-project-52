@@ -9,7 +9,6 @@ from django_filters.views import FilterView
 from .filters import TasksFilterSet
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
-from task_manager.apps.tasks.forms import CustomTaskCreationForm
 from django.urls import reverse
 from task_manager.utils.text import Titles, Messages, Buttons
 
@@ -42,7 +41,8 @@ class TaskDetaileView(LoginRequiredMixin, DetailView):
 
 
 class TaskCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
-    form_class = CustomTaskCreationForm
+    model = Task
+    fields = ['name', 'description', 'status', 'performer', 'tags']
     template_name = 'crud/create.html'
     success_message = message.task_create_succ
 
@@ -61,7 +61,7 @@ class TaskCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
 
 class TaskUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Task
-    form_class = CustomTaskCreationForm
+    fields = ['name', 'description', 'status', 'performer', 'tags']
     template_name = 'crud/update.html'
     success_message = message.task_update_succ
 

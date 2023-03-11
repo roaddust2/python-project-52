@@ -29,7 +29,7 @@ def test_create_status(client, user, status_data):
     assert Status.objects.filter(name=status_data['name']).exists()
 
 
-def test_create_status_err(client, user):
+def test_create_status_err(client):
     url = reverse('statuses_create')
     """Test view GET, logged out"""
     response = client.get(url)
@@ -64,7 +64,7 @@ def test_status_update(client, user, status, status_data):
 
 
 @pytest.mark.django_db
-def test_status_update_err(client, user, status):
+def test_status_update_err(client, status):
     url = reverse('statuses_update', args=[status.id])
     """Test view GET, logged out"""
     response = client.get(url)

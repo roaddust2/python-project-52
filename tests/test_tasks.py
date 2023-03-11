@@ -37,7 +37,7 @@ def test_create_task(client, user, task_data):
     
 
 
-def test_create_tag_err(client, user):
+def test_create_tag_err(client):
     url = reverse('tasks_create')
     """Test view GET, logged out"""
     response = client.get(url)
@@ -72,7 +72,7 @@ def test_tag_update(client, user, task, task_data):
 
 
 @pytest.mark.django_db
-def test_tag_update_err(client, user, task):
+def test_tag_update_err(client, task):
     url = reverse('tasks_update', args=[task.id])
     """Test view GET, logged out"""
     response = client.get(url)

@@ -29,7 +29,7 @@ def test_create_tag(client, user, tag_data):
     assert Tag.objects.filter(name=tag_data['name']).exists()
 
 
-def test_create_tag_err(client, user):
+def test_create_tag_err(client):
     url = reverse('tags_create')
     """Test view GET, logged out"""
     response = client.get(url)
@@ -64,7 +64,7 @@ def test_tag_update(client, user, tag, tag_data):
 
 
 @pytest.mark.django_db
-def test_tag_update_err(client, user, tag):
+def test_tag_update_err(client, tag):
     url = reverse('tags_update', args=[tag.id])
     """Test view GET, logged out"""
     response = client.get(url)

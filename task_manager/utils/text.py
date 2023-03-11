@@ -68,6 +68,9 @@ class FormFields:
 
         self.task_create_name = _('TaskCreateFormName')
         self.task_create_description = _('TaskCreateFormDescription')
+        self.task_create_performer = _('TaskCreateFormPerformer')
+        self.task_create_status = _('TaskCreateFormStatus')
+        self.task_create_tags = _('TaskCreateFormTags')
         self.tasks_filter_status = _('TasksFilterStatus')
         self.tasks_filter_performer = _('TasksFilterPerformer')
         self.tasks_filter_tags = _('TasksFilterTags')
