@@ -85,7 +85,7 @@ class TaskDeleteView(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMixi
         context = super(TaskDeleteView, self).get_context_data(**kwargs)
         context['delete_title'] = title.task_delete
         return context
-    
+
     def test_func(self):
         obj = self.get_object()
         return obj.author == self.request.user
