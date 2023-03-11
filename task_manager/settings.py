@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     # Third-party apps
     'bootstrap4',
     'django_filters',
+    'rollbar',
     # Project apps
     'task_manager',
     'task_manager.apps.users',
@@ -167,8 +168,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # # Rollbar
 # # https://app.rollbar.com
 
+ROLLBAR_API_KEY = os.getenv('ROLLBAR')
+
 ROLLBAR = {
-    'access_token': os.getenv('ROLLBAR'),
+    'access_token': ROLLBAR_API_KEY,
     'environment': 'development' if DEBUG else 'production',
     'code_version': '1.0',
     'root': BASE_DIR,
