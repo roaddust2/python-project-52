@@ -38,7 +38,7 @@ class LabelsListView(LoginRequiredMixin, ListView):
 
 class LabelCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     model = Label
-    fields = ['name', 'color']
+    fields = ['name']
     template_name = 'crud/create.html'
     success_message = message.label_create_succ
 
@@ -53,7 +53,7 @@ class LabelCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
 
 class LabelUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Label
-    fields = ['name', 'color']
+    fields = ['name']
     template_name = 'crud/update.html'
     success_message = message.label_update_succ
 

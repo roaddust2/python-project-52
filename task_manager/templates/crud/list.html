@@ -84,7 +84,6 @@
         <tr>
             <th>ID</th>
             <th>{% translate 'Name' %}</th>
-            <th>{% translate 'Color' %}</th>
             <th>{% translate 'Creation date' %}</th>
             <th></th>
         </tr>
@@ -95,7 +94,6 @@
         <tr>
             <td>{{label.id}}</td>
             <td>{{label.name}}</td>
-            <td>{{label.get_color_display}}</td>
             <td>{{label.created_at|date:"d.m.Y H:i" }}</td>
             <td>
                 <a href="{% url 'labels_update' pk=label.id %}">{% translate 'Change' %}</a>

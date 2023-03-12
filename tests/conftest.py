@@ -40,14 +40,12 @@ def status(db):
 
 @pytest.fixture
 def label_data():
-    return {
-        'name': 'test_label',
-        'color': 'secondary'}
+    return {'name': 'test_label'}
 
 
 @pytest.fixture
 def label(db):
-    label = Label.objects.create(name='test_label', color='secondary')
+    label = Label.objects.create(name='test_label')
     return label
 
 
