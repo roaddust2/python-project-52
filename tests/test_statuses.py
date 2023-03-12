@@ -2,11 +2,6 @@ import pytest
 from django.urls import reverse
 from task_manager.apps.statuses.models import Status
 from task_manager.utils.text import Titles, Messages
-from tests.fixtures import (
-    user,
-    status,
-    status_data,
-)
 
 
 title = Titles()

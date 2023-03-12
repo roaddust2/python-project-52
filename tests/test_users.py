@@ -1,5 +1,4 @@
 import pytest
-from tests.fixtures import user, user_data
 from django.urls import reverse
 from django.contrib.auth.models import User
 from task_manager.utils.text import Titles, Messages

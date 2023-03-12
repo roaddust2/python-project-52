@@ -5,11 +5,6 @@ from task_manager.apps.tasks.models import Task
 from task_manager.apps.statuses.models import Status
 from task_manager.apps.tags.models import Tag
 from task_manager.utils.text import Titles, Messages
-from tests.fixtures import (
-    user,
-    task,
-    task_data,
-)
 
 
 title = Titles()

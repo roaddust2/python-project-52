@@ -2,11 +2,6 @@ import pytest
 from django.urls import reverse
 from task_manager.apps.tags.models import Tag
 from task_manager.utils.text import Titles, Messages
-from tests.fixtures import (
-    user,
-    label,
-    label_data,
-)
 
 
 title = Titles()
