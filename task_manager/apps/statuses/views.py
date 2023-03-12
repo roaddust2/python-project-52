@@ -8,7 +8,6 @@ from django.views.generic import (
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
 from django.db.models import ProtectedError
-from .forms import StatusForm
 from django.shortcuts import redirect
 from django.contrib import messages
 from django.urls import reverse, reverse_lazy
@@ -37,7 +36,8 @@ class StatusesListView(LoginRequiredMixin, ListView):
 
 
 class StatusCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
-    form_class = StatusForm
+    model = Status
+    fields = ['name']
     template_name = 'crud/create.html'
     success_message = message.status_create_succ
 
@@ -52,7 +52,7 @@ class StatusCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
 
 class StatusUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Status
-    form_class = StatusForm
+    fields = ['name']
     template_name = 'crud/update.html'
     success_message = message.status_update_succ
 
