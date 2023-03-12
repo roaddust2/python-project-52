@@ -124,7 +124,7 @@
             <th>{% translate 'Name' %}</th>
             <th>{% translate 'TasksIndexTableStatus' %}</th>
             <th>{% translate 'TasksIndexTableAuthor' %}</th>
-            <th>{% translate 'TasksIndexTablePerformer' %}</th>
+            <th>{% translate 'TasksIndexTableExecutor' %}</th>
             <th>{% translate 'Creation date' %}</th>
             <th></th>
         </tr>
@@ -137,7 +137,7 @@
             <td><a href="{% url 'tasks_detail' pk=task.id %}">{{task.name}}</a></td>
             <td>{{task.status}}</td>
             <td>{{task.author}}</td>
-            <td>{{task.performer}}</td>
+            <td>{{task.executor}}</td>
             <td>{{task.created_at|date:"d.m.Y H:i" }}</td>
             <td>
                 <a href="{% url 'tasks_update' pk=task.id %}">{% translate 'Change' %}</a>

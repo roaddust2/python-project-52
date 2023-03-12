@@ -26,7 +26,7 @@ class Task(models.Model):
         related_name='executor_of_task',
         null=True,
         blank=True,
-        verbose_name=field.task_create_performer
+        verbose_name=field.task_create_executor
     )
     status = models.ForeignKey(
         Status, on_delete=models.PROTECT,

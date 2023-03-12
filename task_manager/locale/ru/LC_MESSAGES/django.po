@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-12 13:42+0400\n"
+"POT-Creation-Date: 2023-03-12 13:53+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -123,7 +123,7 @@ msgid "TasksIndexTableAuthor"
 msgstr "Автор"
 
 #: task_manager/templates/crud/list.html:127
-msgid "TasksIndexTablePerformer"
+msgid "TasksIndexTableExecutor"
 msgstr "Исполнитель"
 
 #: task_manager/templates/crud/update.html:10
@@ -159,7 +159,7 @@ msgid "TaskDetailAuthor"
 msgstr "Автор"
 
 #: task_manager/templates/tasks/task.html:20
-msgid "TaskDetailPerformer"
+msgid "TaskDetailExecutor"
 msgstr "Исполнитель"
 
 #: task_manager/templates/tasks/task.html:24
@@ -351,7 +351,7 @@ msgid "TaskCreateFormDescription"
 msgstr "Описание"
 
 #: task_manager/utils/text.py:73
-msgid "TaskCreateFormPerformer"
+msgid "TaskCreateFormExecutor"
 msgstr "Исполнитель"
 
 #: task_manager/utils/text.py:74
