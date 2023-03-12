@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from task_manager.apps.statuses.models import Status
-from task_manager.apps.tags.models import Tag
+from task_manager.apps.labels.models import Label
 from task_manager.utils.text import FormFields
 
 
@@ -33,7 +33,7 @@ class Task(models.Model):
         verbose_name=field.task_create_status
     )
     labels = models.ManyToManyField(
-        Tag,
+        Label,
         blank=True,
         verbose_name=field.task_create_labels
     )

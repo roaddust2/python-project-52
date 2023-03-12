@@ -1,6 +1,6 @@
 from django_filters import FilterSet, ModelChoiceFilter, BooleanFilter
 from django.contrib.auth.models import User
-from task_manager.apps.tags.models import Tag
+from task_manager.apps.labels.models import Label
 from task_manager.apps.tasks.models import Task
 from task_manager.apps.statuses.models import Status
 from django import forms
@@ -43,7 +43,7 @@ class TasksFilterSet(FilterSet):
     )
 
     labels = ModelChoiceFilter(
-        queryset=Tag.objects.all(),
+        queryset=Label.objects.all(),
         label=field.tasks_filter_labels,
         widget=forms.Select(
             attrs={

@@ -3,7 +3,7 @@ from django.urls import reverse
 from django.contrib.auth.models import User
 from task_manager.apps.tasks.models import Task
 from task_manager.apps.statuses.models import Status
-from task_manager.apps.tags.models import Tag
+from task_manager.apps.labels.models import Label
 from task_manager.utils.text import Titles, Messages
 
 
@@ -23,7 +23,7 @@ def test_create_task(client, user, task_data):
     """Test view POST"""
     User.objects.create_user('executor')
     Status.objects.create(name='test_status')
-    Tag.objects.create(name='test_label')
+    Label.objects.create(name='test_label')
     response = client.post(url, task_data, follow=True)
     print(response.content)
     assert Task.objects.filter(name=task_data['name']).exists()

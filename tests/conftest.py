@@ -1,7 +1,7 @@
 import pytest
 from django.contrib.auth.models import User
 from task_manager.apps.statuses.models import Status
-from task_manager.apps.tags.models import Tag
+from task_manager.apps.labels.models import Label
 from task_manager.apps.tasks.models import Task
 
 
@@ -45,8 +45,8 @@ def label_data():
 
 @pytest.fixture
 def label(db):
-    tag = Tag.objects.create(name='test_label')
-    return tag
+    label = Label.objects.create(name='test_label')
+    return label
 
 
 @pytest.fixture
@@ -69,5 +69,5 @@ def task(db):
         executor=User.objects.create_user('executor'),
         status=Status.objects.create(name='test_status')
     )
-    task.labels.set([Tag.objects.create(name='test_label')])
+    task.labels.set([Label.objects.create(name='test_label')])
     return task

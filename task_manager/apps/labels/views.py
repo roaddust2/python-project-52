@@ -1,5 +1,5 @@
 from django.db import IntegrityError
-from .models import Tag
+from .models import Label
 from task_manager.apps.tasks.models import Task
 from django.views.generic import (
     ListView,
@@ -21,7 +21,7 @@ button = Buttons()
 
 
 class LabelsListView(LoginRequiredMixin, ListView):
-    model = Tag
+    model = Label
     template_name = 'crud/list.html'
     context_object_name = 'labels'
 
@@ -37,7 +37,7 @@ class LabelsListView(LoginRequiredMixin, ListView):
 
 
 class LabelCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
-    model = Tag
+    model = Label
     fields = ['name']
     template_name = 'crud/create.html'
     success_message = message.label_create_succ
@@ -52,7 +52,7 @@ class LabelCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
 
 
 class LabelUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
-    model = Tag
+    model = Label
     fields = ['name']
     template_name = 'crud/update.html'
     success_message = message.label_update_succ
@@ -67,7 +67,7 @@ class LabelUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
 
 
 class LabelDeleteView(LoginRequiredMixin, DeleteView):
-    model = Tag
+    model = Label
     template_name = 'crud/delete.html'
     success_url = reverse_lazy('labels_index')
 

@@ -1,6 +1,6 @@
 import pytest
 from django.urls import reverse
-from task_manager.apps.tags.models import Tag
+from task_manager.apps.labels.models import Label
 from task_manager.utils.text import Titles, Messages
 
 
@@ -21,7 +21,7 @@ def test_create_label(client, user, label_data):
     response = client.post(url, label_data, follow=True)
     assert response.status_code == 200
     assert message.label_create_succ.encode('UTF-8') in response.content
-    assert Tag.objects.filter(name=label_data['name']).exists()
+    assert Label.objects.filter(name=label_data['name']).exists()
 
 
 def test_create_label_err(client):
@@ -55,7 +55,7 @@ def test_label_update(client, user, label, label_data):
     response = client.post(url, label_data, follow=True)
     assert response.status_code == 200
     assert message.label_update_succ.encode('UTF-8') in response.content
-    assert Tag.objects.filter(name=label_data['name']).exists()
+    assert Label.objects.filter(name=label_data['name']).exists()
 
 
 @pytest.mark.django_db
@@ -79,4 +79,4 @@ def test_label_delete(client, user, label):
     response = client.post(url, follow=True)
     assert response.status_code == 200
     assert message.label_delete_succ.encode('UTF-8') in response.content
-    assert Tag.objects.filter(pk=1).exists() is False
+    assert Label.objects.filter(pk=1).exists() is False

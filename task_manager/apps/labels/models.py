@@ -5,7 +5,7 @@ from task_manager.utils.text import FormFields
 field = FormFields()
 
 
-class Tag(models.Model):
+class Label(models.Model):
     name = models.CharField(
         max_length=30,
         verbose_name=field.label_create_name
