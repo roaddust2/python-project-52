@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-12 14:39+0400\n"
+"POT-Creation-Date: 2023-03-12 20:52+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -78,51 +78,55 @@ msgstr "Полное имя"
 
 #: task_manager/templates/crud/list.html:28
 #: task_manager/templates/crud/list.html:58
-#: task_manager/templates/crud/list.html:87
-#: task_manager/templates/crud/list.html:128
+#: task_manager/templates/crud/list.html:88
+#: task_manager/templates/crud/list.html:130
 #: task_manager/templates/tasks/task.html:28
 msgid "Creation date"
 msgstr "Дата создания"
 
 #: task_manager/templates/crud/list.html:41
 #: task_manager/templates/crud/list.html:70
-#: task_manager/templates/crud/list.html:99
-#: task_manager/templates/crud/list.html:143
-#: task_manager/templates/tasks/task.html:45
+#: task_manager/templates/crud/list.html:101
+#: task_manager/templates/crud/list.html:145
+#: task_manager/templates/tasks/task.html:43
 msgid "Change"
 msgstr "Изменить"
 
 #: task_manager/templates/crud/list.html:43
 #: task_manager/templates/crud/list.html:72
-#: task_manager/templates/crud/list.html:101
-#: task_manager/templates/crud/list.html:145
-#: task_manager/templates/tasks/task.html:47
+#: task_manager/templates/crud/list.html:103
+#: task_manager/templates/crud/list.html:147
+#: task_manager/templates/tasks/task.html:45
 msgid "Delete"
 msgstr "Удалить"
 
 #: task_manager/templates/crud/list.html:57
 #: task_manager/templates/crud/list.html:86
-#: task_manager/templates/crud/list.html:124
+#: task_manager/templates/crud/list.html:126
 msgid "Name"
 msgstr "Имя"
 
-#: task_manager/templates/crud/list.html:115
+#: task_manager/templates/crud/list.html:87
+msgid "Color"
+msgstr "Цвет"
+
+#: task_manager/templates/crud/list.html:117
 msgid "Display"
 msgstr "Показать"
 
-#: task_manager/templates/crud/list.html:116
+#: task_manager/templates/crud/list.html:118
 msgid "Clear"
 msgstr "Очистить"
 
-#: task_manager/templates/crud/list.html:125
+#: task_manager/templates/crud/list.html:127
 msgid "TasksIndexTableStatus"
 msgstr "Статус"
 
-#: task_manager/templates/crud/list.html:126
+#: task_manager/templates/crud/list.html:128
 msgid "TasksIndexTableAuthor"
 msgstr "Автор"
 
-#: task_manager/templates/crud/list.html:127
+#: task_manager/templates/crud/list.html:129
 msgid "TasksIndexTableExecutor"
 msgstr "Исполнитель"
 
@@ -342,38 +346,58 @@ msgstr "Имя"
 msgid "LabelCreateFormName"
 msgstr "Имя"
 
-#: task_manager/utils/text.py:71
+#: task_manager/utils/text.py:70
+msgid "LabelCreateFormColor"
+msgstr "Цвет"
+
+#: task_manager/utils/text.py:73
 msgid "TaskCreateFormName"
 msgstr "Имя"
 
-#: task_manager/utils/text.py:72
+#: task_manager/utils/text.py:74
 msgid "TaskCreateFormDescription"
 msgstr "Описание"
 
-#: task_manager/utils/text.py:73
+#: task_manager/utils/text.py:75
 msgid "TaskCreateFormExecutor"
 msgstr "Исполнитель"
 
-#: task_manager/utils/text.py:74
+#: task_manager/utils/text.py:76
 msgid "TaskCreateFormStatus"
 msgstr "Статус"
 
-#: task_manager/utils/text.py:75
+#: task_manager/utils/text.py:77
 msgid "TaskCreateFormLabels"
 msgstr "Метки"
 
-#: task_manager/utils/text.py:76
+#: task_manager/utils/text.py:78
 msgid "TasksFilterStatus"
 msgstr "Статус"
 
-#: task_manager/utils/text.py:77
+#: task_manager/utils/text.py:79
 msgid "TasksFilterExecutor"
 msgstr "Исполнитель"
 
-#: task_manager/utils/text.py:78
+#: task_manager/utils/text.py:80
 msgid "TasksFilterLabels"
 msgstr "Метка"
 
-#: task_manager/utils/text.py:79
+#: task_manager/utils/text.py:81
 msgid "TasksFilterSelfTasks"
 msgstr "Только свои задачи"
+
+#: task_manager/utils/text.py:86
+msgid "Red"
+msgstr "Красный"
+
+#: task_manager/utils/text.py:87
+msgid "Green"
+msgstr "Зелёный"
+
+#: task_manager/utils/text.py:88
+msgid "Blue"
+msgstr "Синий"
+
+#: task_manager/utils/text.py:89
+msgid "Gray"
+msgstr "Серый"

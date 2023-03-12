@@ -67,6 +67,7 @@ class FormFields:
         self.status_create_name = _('StatusCreateFormName')
 
         self.label_create_name = _('LabelCreateFormName')
+        self.label_create_color = _('LabelCreateFormColor')
 
         self.task_create_name = _('TaskCreateFormName')
         self.task_create_description = _('TaskCreateFormDescription')
@@ -77,3 +78,11 @@ class FormFields:
         self.tasks_filter_executor = _('TasksFilterExecutor')
         self.tasks_filter_labels = _('TasksFilterLabels')
         self.tasks_filter_self_tasks = _('TasksFilterSelfTasks')
+
+
+class Colors:
+    def __init__(self):
+        self.red = _('Red')
+        self.green = _('Green')
+        self.blue = _('Blue')
+        self.gray = _('Gray')
