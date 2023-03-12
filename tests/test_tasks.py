@@ -34,7 +34,6 @@ def test_create_task(client, user, task_data):
     assert Task.objects.filter(name=task_data['name']).exists()
     assert response.status_code == 200
     assert message.task_create_succ.encode('UTF-8') in response.content
-    
 
 
 def test_create_task_err(client):
