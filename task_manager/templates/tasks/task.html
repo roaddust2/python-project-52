@@ -30,11 +30,11 @@
     </div>
     <div class="row p-1">
         <div class="col">
-            <h6>{% translate 'TaskDetailTags' %}</h6>
+            <h6>{% translate 'TaskDetailLabels' %}</h6>
             <ul>
-                {% if task.tags %}
-                {% for tag in task.tags.all %}
-                <li>{{ tag }}</li>
+                {% if task.labels %}
+                {% for label in task.labels.all %}
+                <li>{{ label }}</li>
                 {% endfor %}
                 {% endif %}
             </ul>

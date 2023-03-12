@@ -28,7 +28,7 @@ def test_create_task(client, user, task_data):
     """Test view POST"""
     User.objects.create_user('executor')
     Status.objects.create(name='test_status')
-    Tag.objects.create(name='test_tag')
+    Tag.objects.create(name='test_label')
     response = client.post(url, task_data, follow=True)
     print(response.content)
     assert Task.objects.filter(name=task_data['name']).exists()
@@ -37,14 +37,14 @@ def test_create_task(client, user, task_data):
     
 
 
-def test_create_tag_err(client):
+def test_create_task_err(client):
     url = reverse('tasks_create')
     """Test view GET, logged out"""
     response = client.get(url)
     assert response.status_code == 302
 
 
-def test_list_tags(client, user, task):
+def test_list_tasks(client, user, task):
     client.force_login(user)
     url = reverse('tasks_index')
     """Test view GET"""
@@ -55,7 +55,7 @@ def test_list_tags(client, user, task):
 
 
 @pytest.mark.django_db
-def test_tag_update(client, user, task, task_data):
+def test_task_update(client, user, task, task_data):
     client.force_login(user)
     url = reverse('tasks_update', args=[task.id])
     """Test view GET"""
@@ -72,7 +72,7 @@ def test_tag_update(client, user, task, task_data):
 
 
 @pytest.mark.django_db
-def test_tag_update_err(client, task):
+def test_task_update_err(client, task):
     url = reverse('tasks_update', args=[task.id])
     """Test view GET, logged out"""
     response = client.get(url)
@@ -80,7 +80,7 @@ def test_tag_update_err(client, task):
 
 
 @pytest.mark.django_db
-def test_tag_delete(client, user):
+def test_task_delete(client, user):
     client.force_login(user)
     task = Task.objects.create(
         name='test_task',

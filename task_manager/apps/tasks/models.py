@@ -32,10 +32,10 @@ class Task(models.Model):
         Status, on_delete=models.PROTECT,
         verbose_name=field.task_create_status
     )
-    tags = models.ManyToManyField(
+    labels = models.ManyToManyField(
         Tag,
         blank=True,
-        verbose_name=field.task_create_tags
+        verbose_name=field.task_create_labels
     )
     created_at = models.DateTimeField(auto_now_add=True)
 

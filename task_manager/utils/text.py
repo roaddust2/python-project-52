@@ -13,10 +13,10 @@ class Titles:
         self.status_update = _('StatusUpdateTitle')
         self.status_delete = _('StatusDeleteTitle')
 
-        self.tag_create = _('TagCreateTitle')
-        self.tags_list = _('TagsListTitle')
-        self.tag_update = _('TagUpdateTitle')
-        self.tag_delete = _('TagDeleteTitle')
+        self.label_create = _('LabelCreateTitle')
+        self.labels_list = _('LabelsListTitle')
+        self.label_update = _('LabelUpdateTitle')
+        self.label_delete = _('LabelDeleteTitle')
 
         self.task_create = _('TaskCreateTitle')
         self.tasks_list = _('TasksListTitle')
@@ -40,10 +40,10 @@ class Messages:
         self.status_delete_succ = _('StatusDeleteMessageSucc')
         self.status_delete_err = _('StatusDeleteMessageErr')
 
-        self.tag_create_succ = _('TagCreateMessageSucc')
-        self.tag_update_succ = _('TagUpdateMessageSucc')
-        self.tag_delete_succ = _('TagDeleteMessageSucc')
-        self.tag_delete_err = _('TagDeleteMessageErr')
+        self.label_create_succ = _('CreateMessageSucc')
+        self.label_update_succ = _('LabelUpdateMessageSucc')
+        self.label_delete_succ = _('LabelDeleteMessageSucc')
+        self.label_delete_err = _('LabelDeleteMessageErr')
 
         self.task_create_succ = _('TaskCreateMessageSucc')
         self.task_update_succ = _('TaskUpdateMessageSucc')
@@ -54,7 +54,7 @@ class Messages:
 class Buttons:
     def __init__(self):
         self.status_create_btn = _('StatusCreateBtn')
-        self.tag_create_btn = _('TagCreateBtn')
+        self.label_create_btn = _('LabelCreateBtn')
         self.task_create_btn = _('TaskCreateBtn')
         self.user_create_btn = _('UserCreateBtn')
 
@@ -66,14 +66,14 @@ class FormFields:
 
         self.status_create_name = _('StatusCreateFormName')
 
-        self.tag_create_name = _('TagCreateFormName')
+        self.label_create_name = _('LabelCreateFormName')
 
         self.task_create_name = _('TaskCreateFormName')
         self.task_create_description = _('TaskCreateFormDescription')
         self.task_create_executor = _('TaskCreateFormExecutor')
         self.task_create_status = _('TaskCreateFormStatus')
-        self.task_create_tags = _('TaskCreateFormTags')
+        self.task_create_labels = _('TaskCreateFormLabels')
         self.tasks_filter_status = _('TasksFilterStatus')
         self.tasks_filter_executor = _('TasksFilterExecutor')
-        self.tasks_filter_tags = _('TasksFilterTags')
+        self.tasks_filter_labels = _('TasksFilterLabels')
         self.tasks_filter_self_tasks = _('TasksFilterSelfTasks')

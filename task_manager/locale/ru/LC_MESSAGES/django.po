@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-12 13:53+0400\n"
+"POT-Creation-Date: 2023-03-12 14:39+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,7 +37,7 @@ msgid "BaseNavbarStatuses"
 msgstr "Статусы"
 
 #: task_manager/templates/base.html:26
-msgid "BaseNavbarTags"
+msgid "BaseNavbarLabels"
 msgstr "Метки"
 
 #: task_manager/templates/base.html:29
@@ -167,7 +167,7 @@ msgid "TaskDetailStatus"
 msgstr "Статус"
 
 #: task_manager/templates/tasks/task.html:33
-msgid "TaskDetailTags"
+msgid "TaskDetailLabels"
 msgstr "Метки:"
 
 #: task_manager/utils/text.py:6
@@ -203,19 +203,19 @@ msgid "StatusDeleteTitle"
 msgstr "Удаление статуса"
 
 #: task_manager/utils/text.py:16
-msgid "TagCreateTitle"
+msgid "LabelCreateTitle"
 msgstr "Создать метку"
 
 #: task_manager/utils/text.py:17
-msgid "TagsListTitle"
+msgid "LabelsListTitle"
 msgstr "Метки"
 
 #: task_manager/utils/text.py:18
-msgid "TagUpdateTitle"
+msgid "LabelUpdateTitle"
 msgstr "Изменение метки"
 
 #: task_manager/utils/text.py:19
-msgid "TagDeleteTitle"
+msgid "LabelDeleteTitle"
 msgstr "Удаление метки"
 
 #: task_manager/utils/text.py:21
@@ -279,19 +279,19 @@ msgid "StatusDeleteMessageErr"
 msgstr "Невозможно удалить статус, потому что он используется"
 
 #: task_manager/utils/text.py:43
-msgid "TagCreateMessageSucc"
+msgid "CreateMessageSucc"
 msgstr "Метка успешно создана"
 
 #: task_manager/utils/text.py:44
-msgid "TagUpdateMessageSucc"
+msgid "LabelUpdateMessageSucc"
 msgstr "Метка успешно изменена"
 
 #: task_manager/utils/text.py:45
-msgid "TagDeleteMessageSucc"
+msgid "LabelDeleteMessageSucc"
 msgstr "Метка успешно удалена"
 
 #: task_manager/utils/text.py:46
-msgid "TagDeleteMessageErr"
+msgid "LabelDeleteMessageErr"
 msgstr "Невозможно удалить метку, потому что она используется"
 
 #: task_manager/utils/text.py:48
@@ -315,7 +315,7 @@ msgid "StatusCreateBtn"
 msgstr "Создать статус"
 
 #: task_manager/utils/text.py:57
-msgid "TagCreateBtn"
+msgid "LabelCreateBtn"
 msgstr "Создать метку"
 
 #: task_manager/utils/text.py:58
@@ -339,7 +339,7 @@ msgid "StatusCreateFormName"
 msgstr "Имя"
 
 #: task_manager/utils/text.py:69
-msgid "TagCreateFormName"
+msgid "LabelCreateFormName"
 msgstr "Имя"
 
 #: task_manager/utils/text.py:71
@@ -359,7 +359,7 @@ msgid "TaskCreateFormStatus"
 msgstr "Статус"
 
 #: task_manager/utils/text.py:75
-msgid "TaskCreateFormTags"
+msgid "TaskCreateFormLabels"
 msgstr "Метки"
 
 #: task_manager/utils/text.py:76
@@ -371,7 +371,7 @@ msgid "TasksFilterExecutor"
 msgstr "Исполнитель"
 
 #: task_manager/utils/text.py:78
-msgid "TasksFilterTags"
+msgid "TasksFilterLabels"
 msgstr "Метка"
 
 #: task_manager/utils/text.py:79

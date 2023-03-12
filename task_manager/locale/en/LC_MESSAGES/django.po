@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-12 13:53+0400\n"
+"POT-Creation-Date: 2023-03-12 14:39+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,8 +35,8 @@ msgid "BaseNavbarStatuses"
 msgstr "Statuses"
 
 #: task_manager/templates/base.html:26
-msgid "BaseNavbarTags"
-msgstr "Tags"
+msgid "BaseNavbarLabels"
+msgstr "Labels"
 
 #: task_manager/templates/base.html:29
 msgid "BaseNavbarTasks"
@@ -165,8 +165,8 @@ msgid "TaskDetailStatus"
 msgstr "Status"
 
 #: task_manager/templates/tasks/task.html:33
-msgid "TaskDetailTags"
-msgstr "Tags:"
+msgid "TaskDetailLabels"
+msgstr "Labels:"
 
 #: task_manager/utils/text.py:6
 msgid "UserCreateTitle"
@@ -201,20 +201,20 @@ msgid "StatusDeleteTitle"
 msgstr "Delete status"
 
 #: task_manager/utils/text.py:16
-msgid "TagCreateTitle"
-msgstr "Create tag"
+msgid "LabelCreateTitle"
+msgstr "Create label"
 
 #: task_manager/utils/text.py:17
-msgid "TagsListTitle"
-msgstr "Tags"
+msgid "LabelsListTitle"
+msgstr "Labels"
 
 #: task_manager/utils/text.py:18
-msgid "TagUpdateTitle"
-msgstr "Change tag"
+msgid "LabelUpdateTitle"
+msgstr "Change label"
 
 #: task_manager/utils/text.py:19
-msgid "TagDeleteTitle"
-msgstr "Delete tag"
+msgid "LabelDeleteTitle"
+msgstr "Delete label"
 
 #: task_manager/utils/text.py:21
 msgid "TaskCreateTitle"
@@ -277,19 +277,19 @@ msgid "StatusDeleteMessageErr"
 msgstr "Can't delete status because it's in use"
 
 #: task_manager/utils/text.py:43
-msgid "TagCreateMessageSucc"
-msgstr "Tag created successfully"
+msgid "CreateMessageSucc"
+msgstr "Label created successfully"
 
 #: task_manager/utils/text.py:44
-msgid "TagUpdateMessageSucc"
-msgstr "Tag changed successfully"
+msgid "LabelUpdateMessageSucc"
+msgstr "Label changed successfully"
 
 #: task_manager/utils/text.py:45
-msgid "TagDeleteMessageSucc"
-msgstr "Tag deleted successfully"
+msgid "LabelDeleteMessageSucc"
+msgstr "Label deleted successfully"
 
 #: task_manager/utils/text.py:46
-msgid "TagDeleteMessageErr"
+msgid "LabelDeleteMessageErr"
 msgstr "Can't delete label because it's in use"
 
 #: task_manager/utils/text.py:48
@@ -313,8 +313,8 @@ msgid "StatusCreateBtn"
 msgstr "Create status"
 
 #: task_manager/utils/text.py:57
-msgid "TagCreateBtn"
-msgstr "Create tag"
+msgid "LabelCreateBtn"
+msgstr "Create label"
 
 #: task_manager/utils/text.py:58
 msgid "TaskCreateBtn"
@@ -337,7 +337,7 @@ msgid "StatusCreateFormName"
 msgstr "Name"
 
 #: task_manager/utils/text.py:69
-msgid "TagCreateFormName"
+msgid "LabelCreateFormName"
 msgstr "Name"
 
 #: task_manager/utils/text.py:71
@@ -357,8 +357,8 @@ msgid "TaskCreateFormStatus"
 msgstr "Status"
 
 #: task_manager/utils/text.py:75
-msgid "TaskCreateFormTags"
-msgstr "Tags"
+msgid "TaskCreateFormLabels"
+msgstr "Labels"
 
 #: task_manager/utils/text.py:76
 msgid "TasksFilterStatus"
@@ -369,8 +369,8 @@ msgid "TasksFilterExecutor"
 msgstr "Executor"
 
 #: task_manager/utils/text.py:78
-msgid "TasksFilterTags"
-msgstr "Tags"
+msgid "TasksFilterLabels"
+msgstr "Labels"
 
 #: task_manager/utils/text.py:79
 msgid "TasksFilterSelfTasks"

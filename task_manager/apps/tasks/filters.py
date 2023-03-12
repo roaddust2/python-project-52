@@ -42,14 +42,14 @@ class TasksFilterSet(FilterSet):
         )
     )
 
-    tags = ModelChoiceFilter(
+    labels = ModelChoiceFilter(
         queryset=Tag.objects.all(),
-        label=field.tasks_filter_tags,
+        label=field.tasks_filter_labels,
         widget=forms.Select(
             attrs={
-                'name': 'tags',
+                'name': 'labels',
                 'class': 'form-control',
-                'title_id': 'id_tags'
+                'title_id': 'id_labels'
             }
         )
     )
@@ -67,4 +67,4 @@ class TasksFilterSet(FilterSet):
 
     class Meta:
         model = Task
-        fields = ['status', 'executor', 'tags']
+        fields = ['status', 'executor', 'labels']

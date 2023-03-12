@@ -39,13 +39,13 @@ def status(db):
 
 
 @pytest.fixture
-def tag_data():
-    return {'name': 'test_tag'}
+def label_data():
+    return {'name': 'test_label'}
 
 
 @pytest.fixture
-def tag(db):
-    tag = Tag.objects.create(name='test_tag')
+def label(db):
+    tag = Tag.objects.create(name='test_label')
     return tag
 
 
@@ -56,7 +56,7 @@ def task_data():
         'description': 'test_description',
         'executor': 2,
         'status': 1,
-        'tags': [1]
+        'labels': [1]
     }
 
 
@@ -69,5 +69,5 @@ def task(db):
         executor=User.objects.create_user('executor'),
         status=Status.objects.create(name='test_status')
     )
-    task.tags.set([Tag.objects.create(name='test_status')])
+    task.labels.set([Tag.objects.create(name='test_label')])
     return task
