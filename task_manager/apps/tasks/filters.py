@@ -35,9 +35,9 @@ class TasksFilterSet(FilterSet):
         label=field.tasks_filter_performer,
         widget=forms.Select(
             attrs={
-                'name': 'performer',
+                'name': 'executor',
                 'class': 'form-control',
-                'title_id': 'id_performer'
+                'title_id': 'id_executor'
             }
         )
     )
