@@ -74,6 +74,6 @@ class FormFields:
         self.task_create_status = _('TaskCreateFormStatus')
         self.task_create_tags = _('TaskCreateFormTags')
         self.tasks_filter_status = _('TasksFilterStatus')
-        self.tasks_filter_performer = _('TasksFilterPerformer')
+        self.tasks_filter_executor = _('TasksFilterExecutor')
         self.tasks_filter_tags = _('TasksFilterTags')
         self.tasks_filter_self_tasks = _('TasksFilterSelfTasks')

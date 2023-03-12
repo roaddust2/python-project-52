@@ -21,9 +21,9 @@ class Task(models.Model):
         User, on_delete=models.PROTECT,
         related_name='author_of_task'
     )
-    performer = models.ForeignKey(
+    executor = models.ForeignKey(
         User, on_delete=models.PROTECT,
-        related_name='performer_of_task',
+        related_name='executor_of_task',
         null=True,
         blank=True,
         verbose_name=field.task_create_performer

@@ -26,7 +26,7 @@ def test_create_task(client, user, task_data):
     assert title.task_create.encode('UTF-8') in response.content
 
     """Test view POST"""
-    User.objects.create_user('performer')
+    User.objects.create_user('executor')
     Status.objects.create(name='test_status')
     Tag.objects.create(name='test_tag')
     response = client.post(url, task_data, follow=True)
@@ -86,7 +86,7 @@ def test_tag_delete(client, user):
         name='test_task',
         description='test_description',
         author=user,
-        performer=User.objects.create_user('performer'),
+        executor=User.objects.create_user('executor'),
         status=Status.objects.create(name='test_status')
     )
     url = reverse('tasks_delete', args=[task.id])

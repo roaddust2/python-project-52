@@ -30,9 +30,9 @@ class TasksFilterSet(FilterSet):
         )
     )
 
-    performer = ModelChoiceFilter(
+    executor = ModelChoiceFilter(
         queryset=User.objects.all(),
-        label=field.tasks_filter_performer,
+        label=field.tasks_filter_executor,
         widget=forms.Select(
             attrs={
                 'name': 'executor',
@@ -67,4 +67,4 @@ class TasksFilterSet(FilterSet):
 
     class Meta:
         model = Task
-        fields = ['status', 'performer', 'tags']
+        fields = ['status', 'executor', 'tags']

@@ -54,7 +54,7 @@ def task_data():
     return {
         'name': 'test_task',
         'description': 'test_description',
-        'performer': 2,
+        'executor': 2,
         'status': 1,
         'tags': [1]
     }
@@ -66,7 +66,7 @@ def task(db):
         name='test_task',
         description='test_description',
         author=User.objects.create_user('author'),
-        performer=User.objects.create_user('performer'),
+        executor=User.objects.create_user('executor'),
         status=Status.objects.create(name='test_status')
     )
     task.tags.set([Tag.objects.create(name='test_status')])

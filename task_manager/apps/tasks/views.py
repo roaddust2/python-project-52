@@ -44,7 +44,7 @@ class TaskDetaileView(LoginRequiredMixin, DetailView):
 
 class TaskCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     model = Task
-    fields = ['name', 'description', 'status', 'performer', 'tags']
+    fields = ['name', 'description', 'status', 'executor', 'tags']
     template_name = 'crud/create.html'
     success_message = message.task_create_succ
 
@@ -63,7 +63,7 @@ class TaskCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
 
 class TaskUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Task
-    fields = ['name', 'description', 'status', 'performer', 'tags']
+    fields = ['name', 'description', 'status', 'executor', 'tags']
     template_name = 'crud/update.html'
     success_message = message.task_update_succ
 
